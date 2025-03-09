@@ -1,0 +1,275 @@
+activity Declaration SUBMITTED by EMPLOYEE
+bind Declaration SUBMITTED by EMPLOYEE: org:resource
+activity Declaration FINAL_APPROVED by SUPERVISOR
+bind Declaration FINAL_APPROVED by SUPERVISOR: org:resource
+activity Request Payment
+bind Request Payment: org:resource
+activity Payment Handled
+bind Payment Handled: org:resource
+activity Declaration APPROVED by ADMINISTRATION
+bind Declaration APPROVED by ADMINISTRATION: org:resource
+activity Declaration APPROVED by BUDGET OWNER
+bind Declaration APPROVED by BUDGET OWNER: org:resource
+activity Declaration REJECTED by EMPLOYEE
+bind Declaration REJECTED by EMPLOYEE: org:resource
+org:resource: SYSTEM, STAFF MEMBER
+Choice[Payment Handled, Request Payment] | | |
+Choice[Declaration APPROVED by ADMINISTRATION, Request Payment] | | |
+Choice[Declaration APPROVED by ADMINISTRATION, Declaration SUBMITTED by EMPLOYEE] | | |
+Choice[Declaration APPROVED by BUDGET OWNER, Declaration SUBMITTED by EMPLOYEE] | | |
+Choice[Declaration FINAL_APPROVED by SUPERVISOR, Payment Handled] | | |
+Choice[Declaration APPROVED by ADMINISTRATION, Declaration REJECTED by EMPLOYEE] | | |
+Choice[Declaration FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Choice[Declaration APPROVED by ADMINISTRATION, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Choice[Declaration APPROVED by BUDGET OWNER, Request Payment] | | |
+Choice[Declaration SUBMITTED by EMPLOYEE, Request Payment] | | |
+Choice[Declaration FINAL_APPROVED by SUPERVISOR, Declaration REJECTED by EMPLOYEE] | | |
+Choice[Declaration REJECTED by EMPLOYEE, Payment Handled] | | |
+Choice[Declaration REJECTED by EMPLOYEE, Declaration SUBMITTED by EMPLOYEE] | | |
+Choice[Declaration REJECTED by EMPLOYEE, Request Payment] | | |
+Choice[Declaration APPROVED by BUDGET OWNER, Declaration REJECTED by EMPLOYEE] | | |
+Choice[Declaration APPROVED by BUDGET OWNER, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Choice[Declaration APPROVED by ADMINISTRATION, Payment Handled] | | |
+Choice[Declaration SUBMITTED by EMPLOYEE, Payment Handled] | | |
+Choice[Declaration APPROVED by ADMINISTRATION, Declaration APPROVED by BUDGET OWNER] | | |
+Choice[Declaration FINAL_APPROVED by SUPERVISOR, Declaration SUBMITTED by EMPLOYEE] | | |
+Choice[Declaration APPROVED by BUDGET OWNER, Payment Handled] | | |
+Alternate Precedence[Declaration SUBMITTED by EMPLOYEE, Declaration REJECTED by EMPLOYEE] | | |
+Alternate Precedence[Declaration SUBMITTED by EMPLOYEE, Declaration APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Declaration SUBMITTED by EMPLOYEE, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Declaration APPROVED by ADMINISTRATION, Declaration APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Declaration SUBMITTED by EMPLOYEE, Declaration APPROVED by ADMINISTRATION] | | |
+Responded Existence[Declaration APPROVED by ADMINISTRATION, Declaration SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Declaration APPROVED by BUDGET OWNER, Declaration APPROVED by ADMINISTRATION] | | |
+Responded Existence[Declaration APPROVED by BUDGET OWNER, Declaration SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Declaration REJECTED by EMPLOYEE, Declaration SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Declaration FINAL_APPROVED by SUPERVISOR, Declaration SUBMITTED by EMPLOYEE] | | |
+Chain Precedence[Declaration APPROVED by ADMINISTRATION, Declaration APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Declaration SUBMITTED by EMPLOYEE, Declaration APPROVED by ADMINISTRATION] | | |
+Absence3[Request Payment] | |
+Absence3[Payment Handled] | |
+Absence3[Declaration APPROVED by BUDGET OWNER] | |
+Absence2[Request Payment] | |
+Absence2[Payment Handled] | |
+Precedence[Declaration SUBMITTED by EMPLOYEE, Declaration REJECTED by EMPLOYEE] | | |
+Precedence[Declaration SUBMITTED by EMPLOYEE, Declaration APPROVED by BUDGET OWNER] | | |
+Precedence[Declaration SUBMITTED by EMPLOYEE, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Precedence[Declaration APPROVED by ADMINISTRATION, Declaration APPROVED by BUDGET OWNER] | | |
+Precedence[Declaration SUBMITTED by EMPLOYEE, Declaration APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Declaration SUBMITTED by EMPLOYEE, Request Payment] | | |
+Alternate Precedence[Declaration SUBMITTED by EMPLOYEE, Payment Handled] | | |
+Responded Existence[Request Payment, Declaration SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Payment Handled, Declaration SUBMITTED by EMPLOYEE] | | |
+Precedence[Declaration SUBMITTED by EMPLOYEE, Request Payment] | | |
+Precedence[Declaration SUBMITTED by EMPLOYEE, Payment Handled] | | |
+Alternate Precedence[Request Payment, Payment Handled] | | |
+Alternate Precedence[Declaration FINAL_APPROVED by SUPERVISOR, Payment Handled] | | |
+Alternate Precedence[Declaration FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Responded Existence[Payment Handled, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Payment Handled, Request Payment] | | |
+Responded Existence[Request Payment, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Chain Precedence[Request Payment, Payment Handled] | | |
+Chain Precedence[Declaration FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Absence3[Declaration FINAL_APPROVED by SUPERVISOR] | |
+Precedence[Request Payment, Payment Handled] | | |
+Precedence[Declaration FINAL_APPROVED by SUPERVISOR, Payment Handled] | | |
+Precedence[Declaration FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Alternate Response[Request Payment, Payment Handled] | | |
+Chain Response[Request Payment, Payment Handled] | | |
+Responded Existence[Request Payment, Payment Handled] | | |
+Response[Request Payment, Payment Handled] | | |
+Absence3[Declaration APPROVED by ADMINISTRATION] | |
+Responded Existence[Declaration APPROVED by BUDGET OWNER, Request Payment] | | |
+Responded Existence[Declaration APPROVED by BUDGET OWNER, Payment Handled] | | |
+Responded Existence[Declaration APPROVED by BUDGET OWNER, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Response[Declaration APPROVED by BUDGET OWNER, Request Payment] | | |
+Response[Declaration APPROVED by BUDGET OWNER, Payment Handled] | | |
+Response[Declaration APPROVED by BUDGET OWNER, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Absence3[Declaration REJECTED by EMPLOYEE] | |
+Absence2[Declaration APPROVED by BUDGET OWNER] | |
+Alternate Response[Declaration APPROVED by BUDGET OWNER, Request Payment] | | |
+Alternate Response[Declaration APPROVED by BUDGET OWNER, Payment Handled] | | |
+Alternate Response[Declaration APPROVED by BUDGET OWNER, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Chain Response[Declaration APPROVED by BUDGET OWNER, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Declaration FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Response[Declaration FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Responded Existence[Declaration FINAL_APPROVED by SUPERVISOR, Payment Handled] | | |
+Response[Declaration FINAL_APPROVED by SUPERVISOR, Payment Handled] | | |
+Responded Existence[Declaration APPROVED by ADMINISTRATION, Payment Handled] | | |
+Responded Existence[Declaration APPROVED by ADMINISTRATION, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Response[Declaration APPROVED by ADMINISTRATION, Payment Handled] | | |
+Response[Declaration APPROVED by ADMINISTRATION, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Declaration APPROVED by ADMINISTRATION, Request Payment] | | |
+Response[Declaration APPROVED by ADMINISTRATION, Request Payment] | | |
+Absence2[Declaration FINAL_APPROVED by SUPERVISOR] | |
+Alternate Response[Declaration FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Chain Response[Declaration FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Alternate Response[Declaration FINAL_APPROVED by SUPERVISOR, Payment Handled] | | |
+Init[Declaration SUBMITTED by EMPLOYEE] | |
+Absence3[Declaration SUBMITTED by EMPLOYEE] | |
+Existence[Declaration SUBMITTED by EMPLOYEE] | |
+Absence2[Declaration REJECTED by EMPLOYEE] | |
+Absence2[Declaration APPROVED by ADMINISTRATION] | |
+Alternate Response[Declaration APPROVED by ADMINISTRATION, Payment Handled] | | |
+Alternate Response[Declaration APPROVED by ADMINISTRATION, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Response[Declaration APPROVED by ADMINISTRATION, Request Payment] | | |
+Alternate Response[Declaration REJECTED by EMPLOYEE, Declaration SUBMITTED by EMPLOYEE] | | |
+Chain Response[Declaration REJECTED by EMPLOYEE, Declaration SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Declaration REJECTED by EMPLOYEE, Payment Handled] | | |
+Responded Existence[Declaration REJECTED by EMPLOYEE, Request Payment] | | |
+Responded Existence[Declaration REJECTED by EMPLOYEE, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Response[Declaration REJECTED by EMPLOYEE, Declaration SUBMITTED by EMPLOYEE] | | |
+Response[Declaration REJECTED by EMPLOYEE, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Response[Declaration REJECTED by EMPLOYEE, Payment Handled] | | |
+Response[Declaration REJECTED by EMPLOYEE, Request Payment] | | |
+Responded Existence[Declaration SUBMITTED by EMPLOYEE, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Response[Declaration SUBMITTED by EMPLOYEE, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Declaration SUBMITTED by EMPLOYEE, Request Payment] | | |
+Response[Declaration SUBMITTED by EMPLOYEE, Request Payment] | | |
+Responded Existence[Declaration SUBMITTED by EMPLOYEE, Payment Handled] | | |
+Response[Declaration SUBMITTED by EMPLOYEE, Payment Handled] | | |
+Exclusive Choice[Declaration APPROVED by BUDGET OWNER, Declaration REJECTED by EMPLOYEE] | | |
+Responded Existence[Declaration REJECTED by EMPLOYEE, Declaration APPROVED by ADMINISTRATION] | | |
+Alternate Response[Declaration REJECTED by EMPLOYEE, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Response[Declaration REJECTED by EMPLOYEE, Payment Handled] | | |
+Alternate Response[Declaration REJECTED by EMPLOYEE, Request Payment] | | |
+Response[Declaration REJECTED by EMPLOYEE, Declaration APPROVED by ADMINISTRATION] | | |
+Existence[Declaration FINAL_APPROVED by SUPERVISOR] | |
+Exactly1[Request Payment] | |
+Existence[Request Payment] | |
+Exactly1[Payment Handled] | |
+Existence[Payment Handled] | |
+Alternate Response[Declaration REJECTED by EMPLOYEE, Declaration APPROVED by ADMINISTRATION] | | |
+Exactly1[Declaration FINAL_APPROVED by SUPERVISOR] | |
+Exclusive Choice[Declaration APPROVED by ADMINISTRATION, Declaration REJECTED by EMPLOYEE] | | |
+Responded Existence[Declaration REJECTED by EMPLOYEE, Declaration APPROVED by BUDGET OWNER] | | |
+Response[Declaration REJECTED by EMPLOYEE, Declaration APPROVED by BUDGET OWNER] | | |
+Exclusive Choice[Declaration FINAL_APPROVED by SUPERVISOR, Declaration REJECTED by EMPLOYEE] | | |
+Exclusive Choice[Declaration REJECTED by EMPLOYEE, Payment Handled] | | |
+Exclusive Choice[Declaration REJECTED by EMPLOYEE, Request Payment] | | |
+Alternate Response[Declaration REJECTED by EMPLOYEE, Declaration APPROVED by BUDGET OWNER] | | |
+Precedence[Declaration APPROVED by ADMINISTRATION, Declaration REJECTED by EMPLOYEE] | | |
+Alternate Precedence[Declaration APPROVED by ADMINISTRATION, Declaration REJECTED by EMPLOYEE] | | |
+Absence2[Declaration SUBMITTED by EMPLOYEE] | |
+Exactly1[Declaration SUBMITTED by EMPLOYEE] | |
+Precedence[Declaration APPROVED by BUDGET OWNER, Declaration REJECTED by EMPLOYEE] | | |
+Alternate Precedence[Declaration APPROVED by BUDGET OWNER, Declaration REJECTED by EMPLOYEE] | | |
+Chain Precedence[Declaration SUBMITTED by EMPLOYEE, Declaration REJECTED by EMPLOYEE] | | |
+Alternate Precedence[Declaration FINAL_APPROVED by SUPERVISOR, Declaration REJECTED by EMPLOYEE] | | |
+Precedence[Declaration FINAL_APPROVED by SUPERVISOR, Declaration REJECTED by EMPLOYEE] | | |
+Alternate Precedence[Request Payment, Declaration REJECTED by EMPLOYEE] | | |
+Alternate Precedence[Payment Handled, Declaration REJECTED by EMPLOYEE] | | |
+Chain Precedence[Payment Handled, Declaration REJECTED by EMPLOYEE] | | |
+Precedence[Request Payment, Declaration REJECTED by EMPLOYEE] | | |
+Precedence[Payment Handled, Declaration REJECTED by EMPLOYEE] | | |
+Absence[Declaration REJECTED by EMPLOYEE] | |
+Chain Response[Declaration REJECTED by EMPLOYEE, Payment Handled] | | |
+Chain Response[Declaration REJECTED by EMPLOYEE, Declaration APPROVED by ADMINISTRATION] | | |
+Chain Response[Declaration REJECTED by EMPLOYEE, Declaration APPROVED by BUDGET OWNER] | | |
+Chain Response[Declaration REJECTED by EMPLOYEE, Request Payment] | | |
+Chain Response[Declaration REJECTED by EMPLOYEE, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Chain Precedence[Declaration FINAL_APPROVED by SUPERVISOR, Declaration REJECTED by EMPLOYEE] | | |
+Chain Precedence[Declaration APPROVED by ADMINISTRATION, Declaration REJECTED by EMPLOYEE] | | |
+Chain Precedence[Request Payment, Declaration REJECTED by EMPLOYEE] | | |
+Chain Precedence[Declaration APPROVED by BUDGET OWNER, Declaration REJECTED by EMPLOYEE] | | |
+Exclusive Choice[Declaration REJECTED by EMPLOYEE, Declaration SUBMITTED by EMPLOYEE] | | |
+Alternate Response[Declaration SUBMITTED by EMPLOYEE, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Response[Declaration SUBMITTED by EMPLOYEE, Request Payment] | | |
+Alternate Response[Declaration SUBMITTED by EMPLOYEE, Payment Handled] | | |
+Responded Existence[Declaration APPROVED by BUDGET OWNER, Declaration REJECTED by EMPLOYEE] | | |
+Alternate Precedence[Declaration REJECTED by EMPLOYEE, Declaration APPROVED by BUDGET OWNER] | | |
+Precedence[Declaration REJECTED by EMPLOYEE, Declaration APPROVED by BUDGET OWNER] | | |
+Alternate Response[Declaration APPROVED by BUDGET OWNER, Declaration REJECTED by EMPLOYEE] | | |
+Response[Declaration APPROVED by BUDGET OWNER, Declaration REJECTED by EMPLOYEE] | | |
+Alternate Response[Declaration APPROVED by BUDGET OWNER, Declaration SUBMITTED by EMPLOYEE] | | |
+Response[Declaration APPROVED by BUDGET OWNER, Declaration SUBMITTED by EMPLOYEE] | | |
+Alternate Response[Declaration APPROVED by BUDGET OWNER, Declaration APPROVED by ADMINISTRATION] | | |
+Response[Declaration APPROVED by BUDGET OWNER, Declaration APPROVED by ADMINISTRATION] | | |
+Exclusive Choice[Declaration APPROVED by BUDGET OWNER, Request Payment] | | |
+Exclusive Choice[Declaration APPROVED by BUDGET OWNER, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Exclusive Choice[Declaration APPROVED by BUDGET OWNER, Payment Handled] | | |
+Alternate Precedence[Declaration FINAL_APPROVED by SUPERVISOR, Declaration APPROVED by BUDGET OWNER] | | |
+Precedence[Declaration FINAL_APPROVED by SUPERVISOR, Declaration APPROVED by BUDGET OWNER] | | |
+Absence[Declaration APPROVED by BUDGET OWNER] | |
+Chain Response[Declaration APPROVED by BUDGET OWNER, Declaration APPROVED by ADMINISTRATION] | | |
+Chain Response[Declaration APPROVED by BUDGET OWNER, Declaration SUBMITTED by EMPLOYEE] | | |
+Chain Response[Declaration APPROVED by BUDGET OWNER, Request Payment] | | |
+Chain Response[Declaration APPROVED by BUDGET OWNER, Declaration REJECTED by EMPLOYEE] | | |
+Chain Response[Declaration APPROVED by BUDGET OWNER, Payment Handled] | | |
+Alternate Precedence[Payment Handled, Declaration APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Request Payment, Declaration APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Declaration FINAL_APPROVED by SUPERVISOR, Declaration APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Declaration SUBMITTED by EMPLOYEE, Declaration APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Declaration REJECTED by EMPLOYEE, Declaration APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Payment Handled, Declaration APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Request Payment, Declaration APPROVED by BUDGET OWNER] | | |
+Exclusive Choice[Declaration APPROVED by BUDGET OWNER, Declaration SUBMITTED by EMPLOYEE] | | |
+Exclusive Choice[Declaration APPROVED by ADMINISTRATION, Declaration APPROVED by BUDGET OWNER] | | |
+Precedence[Payment Handled, Declaration APPROVED by BUDGET OWNER] | | |
+Precedence[Request Payment, Declaration APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Declaration APPROVED by ADMINISTRATION, Payment Handled] | | |
+Responded Existence[Payment Handled, Declaration APPROVED by ADMINISTRATION] | | |
+Precedence[Declaration APPROVED by ADMINISTRATION, Payment Handled] | | |
+Alternate Precedence[Declaration APPROVED by ADMINISTRATION, Request Payment] | | |
+Responded Existence[Request Payment, Declaration APPROVED by ADMINISTRATION] | | |
+Precedence[Declaration APPROVED by ADMINISTRATION, Request Payment] | | |
+Responded Existence[Declaration FINAL_APPROVED by SUPERVISOR, Declaration APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Declaration APPROVED by ADMINISTRATION, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Precedence[Declaration APPROVED by ADMINISTRATION, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Chain Response[Declaration APPROVED by ADMINISTRATION, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Declaration SUBMITTED by EMPLOYEE, Declaration APPROVED by ADMINISTRATION] | | |
+Response[Declaration SUBMITTED by EMPLOYEE, Declaration APPROVED by ADMINISTRATION] | | |
+Existence[Declaration APPROVED by ADMINISTRATION] | |
+Exactly1[Declaration APPROVED by ADMINISTRATION] | |
+Alternate Response[Declaration SUBMITTED by EMPLOYEE, Declaration APPROVED by ADMINISTRATION] | | |
+Chain Response[Declaration SUBMITTED by EMPLOYEE, Declaration APPROVED by ADMINISTRATION] | | |
+Responded Existence[Declaration APPROVED by ADMINISTRATION, Declaration APPROVED by BUDGET OWNER] | | |
+Response[Declaration APPROVED by ADMINISTRATION, Declaration APPROVED by BUDGET OWNER] | | |
+Alternate Response[Declaration APPROVED by ADMINISTRATION, Declaration APPROVED by BUDGET OWNER] | | |
+Chain Response[Declaration APPROVED by ADMINISTRATION, Declaration APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Declaration APPROVED by ADMINISTRATION, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Declaration APPROVED by ADMINISTRATION, Declaration REJECTED by EMPLOYEE] | | |
+Precedence[Declaration REJECTED by EMPLOYEE, Declaration APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Declaration REJECTED by EMPLOYEE, Declaration APPROVED by ADMINISTRATION] | | |
+Exclusive Choice[Declaration APPROVED by ADMINISTRATION, Request Payment] | | |
+Alternate Response[Declaration APPROVED by ADMINISTRATION, Declaration REJECTED by EMPLOYEE] | | |
+Exclusive Choice[Declaration APPROVED by ADMINISTRATION, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Exclusive Choice[Declaration APPROVED by ADMINISTRATION, Payment Handled] | | |
+Response[Declaration APPROVED by ADMINISTRATION, Declaration REJECTED by EMPLOYEE] | | |
+Alternate Response[Declaration APPROVED by ADMINISTRATION, Declaration SUBMITTED by EMPLOYEE] | | |
+Response[Declaration APPROVED by ADMINISTRATION, Declaration SUBMITTED by EMPLOYEE] | | |
+Alternate Precedence[Declaration FINAL_APPROVED by SUPERVISOR, Declaration APPROVED by ADMINISTRATION] | | |
+Precedence[Declaration FINAL_APPROVED by SUPERVISOR, Declaration APPROVED by ADMINISTRATION] | | |
+Absence[Declaration APPROVED by ADMINISTRATION] | |
+Chain Response[Declaration APPROVED by ADMINISTRATION, Declaration SUBMITTED by EMPLOYEE] | | |
+Chain Response[Declaration APPROVED by ADMINISTRATION, Payment Handled] | | |
+Chain Response[Declaration APPROVED by ADMINISTRATION, Declaration REJECTED by EMPLOYEE] | | |
+Chain Response[Declaration APPROVED by ADMINISTRATION, Request Payment] | | |
+Alternate Precedence[Payment Handled, Declaration APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Declaration APPROVED by BUDGET OWNER, Declaration APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Request Payment, Declaration APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Payment Handled, Declaration APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Declaration APPROVED by BUDGET OWNER, Declaration APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Declaration REJECTED by EMPLOYEE, Declaration APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Request Payment, Declaration APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Declaration FINAL_APPROVED by SUPERVISOR, Declaration APPROVED by ADMINISTRATION] | | |
+Exclusive Choice[Declaration APPROVED by ADMINISTRATION, Declaration SUBMITTED by EMPLOYEE] | | |
+Precedence[Payment Handled, Declaration APPROVED by ADMINISTRATION] | | |
+Precedence[Declaration APPROVED by BUDGET OWNER, Declaration APPROVED by ADMINISTRATION] | | |
+Precedence[Request Payment, Declaration APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Declaration APPROVED by BUDGET OWNER, Payment Handled] | | |
+Responded Existence[Payment Handled, Declaration APPROVED by BUDGET OWNER] | | |
+Precedence[Declaration APPROVED by BUDGET OWNER, Payment Handled] | | |
+Alternate Precedence[Declaration APPROVED by BUDGET OWNER, Request Payment] | | |
+Responded Existence[Request Payment, Declaration APPROVED by BUDGET OWNER] | | |
+Precedence[Declaration APPROVED by BUDGET OWNER, Request Payment] | | |
+Responded Existence[Declaration FINAL_APPROVED by SUPERVISOR, Declaration APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Declaration APPROVED by BUDGET OWNER, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Precedence[Declaration APPROVED by BUDGET OWNER, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Chain Precedence[Declaration APPROVED by BUDGET OWNER, Declaration FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Declaration SUBMITTED by EMPLOYEE, Declaration APPROVED by BUDGET OWNER] | | |
+Response[Declaration SUBMITTED by EMPLOYEE, Declaration APPROVED by BUDGET OWNER] | | |
+Existence[Declaration APPROVED by BUDGET OWNER] | |
+Exactly1[Declaration APPROVED by BUDGET OWNER] | |
+Alternate Response[Declaration SUBMITTED by EMPLOYEE, Declaration APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Declaration SUBMITTED by EMPLOYEE, Declaration FINAL_APPROVED by SUPERVISOR] | | |

@@ -1,0 +1,1061 @@
+activity Request For Payment SUBMITTED by EMPLOYEE
+bind Request For Payment SUBMITTED by EMPLOYEE: org:resource
+activity Request Payment
+bind Request Payment: org:resource
+activity Payment Handled
+bind Payment Handled: org:resource
+activity Request For Payment FINAL_APPROVED by SUPERVISOR
+bind Request For Payment FINAL_APPROVED by SUPERVISOR: org:resource
+activity Permit SUBMITTED by EMPLOYEE
+bind Permit SUBMITTED by EMPLOYEE: org:resource
+activity Request For Payment APPROVED by ADMINISTRATION
+bind Request For Payment APPROVED by ADMINISTRATION: org:resource
+activity Permit APPROVED by ADMINISTRATION
+bind Permit APPROVED by ADMINISTRATION: org:resource
+activity Permit FINAL_APPROVED by SUPERVISOR
+bind Permit FINAL_APPROVED by SUPERVISOR: org:resource
+activity Request For Payment APPROVED by BUDGET OWNER
+bind Request For Payment APPROVED by BUDGET OWNER: org:resource
+activity Permit APPROVED by BUDGET OWNER
+bind Permit APPROVED by BUDGET OWNER: org:resource
+activity Permit APPROVED by SUPERVISOR
+bind Permit APPROVED by SUPERVISOR: org:resource
+activity Permit FINAL_APPROVED by DIRECTOR
+bind Permit FINAL_APPROVED by DIRECTOR: org:resource
+activity Request For Payment REJECTED by EMPLOYEE
+bind Request For Payment REJECTED by EMPLOYEE: org:resource
+org:resource: SYSTEM, STAFF MEMBER
+Choice[Permit APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Choice[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Choice[Permit APPROVED by ADMINISTRATION, Request For Payment APPROVED by ADMINISTRATION] | | |
+Choice[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Choice[Permit APPROVED by ADMINISTRATION, Permit APPROVED by BUDGET OWNER] | | |
+Choice[Permit FINAL_APPROVED by DIRECTOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Choice[Permit FINAL_APPROVED by DIRECTOR, Permit SUBMITTED by EMPLOYEE] | | |
+Choice[Permit APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by DIRECTOR] | | |
+Choice[Request For Payment APPROVED by ADMINISTRATION, Request For Payment APPROVED by BUDGET OWNER] | | |
+Choice[Request For Payment APPROVED by BUDGET OWNER, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Choice[Permit APPROVED by BUDGET OWNER, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Choice[Permit APPROVED by SUPERVISOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Choice[Permit APPROVED by SUPERVISOR, Request Payment] | | |
+Choice[Permit APPROVED by SUPERVISOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Choice[Permit APPROVED by ADMINISTRATION, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Choice[Payment Handled, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Choice[Permit APPROVED by SUPERVISOR, Permit SUBMITTED by EMPLOYEE] | | |
+Choice[Permit APPROVED by ADMINISTRATION, Request For Payment REJECTED by EMPLOYEE] | | |
+Choice[Request For Payment FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Choice[Request For Payment FINAL_APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Choice[Permit APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Choice[Permit FINAL_APPROVED by DIRECTOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Choice[Permit FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Choice[Payment Handled, Permit SUBMITTED by EMPLOYEE] | | |
+Choice[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Choice[Permit FINAL_APPROVED by DIRECTOR, Request Payment] | | |
+Choice[Permit SUBMITTED by EMPLOYEE, Request For Payment APPROVED by ADMINISTRATION] | | |
+Choice[Permit APPROVED by ADMINISTRATION, Request Payment] | | |
+Choice[Payment Handled, Permit APPROVED by BUDGET OWNER] | | |
+Choice[Request For Payment APPROVED by ADMINISTRATION, Request Payment] | | |
+Choice[Permit APPROVED by ADMINISTRATION, Permit SUBMITTED by EMPLOYEE] | | |
+Choice[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Choice[Permit APPROVED by ADMINISTRATION, Request For Payment APPROVED by BUDGET OWNER] | | |
+Choice[Permit SUBMITTED by EMPLOYEE, Request For Payment APPROVED by BUDGET OWNER] | | |
+Choice[Request For Payment SUBMITTED by EMPLOYEE, Request Payment] | | |
+Choice[Permit SUBMITTED by EMPLOYEE, Request Payment] | | |
+Choice[Request For Payment FINAL_APPROVED by SUPERVISOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Choice[Request For Payment APPROVED by BUDGET OWNER, Request Payment] | | |
+Choice[Payment Handled, Request Payment] | | |
+Choice[Request For Payment REJECTED by EMPLOYEE, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Choice[Permit FINAL_APPROVED by DIRECTOR, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Choice[Request For Payment APPROVED by BUDGET OWNER, Request For Payment REJECTED by EMPLOYEE] | | |
+Choice[Permit APPROVED by SUPERVISOR, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Choice[Permit FINAL_APPROVED by SUPERVISOR, Permit SUBMITTED by EMPLOYEE] | | |
+Choice[Permit FINAL_APPROVED by DIRECTOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Choice[Payment Handled, Request For Payment APPROVED by ADMINISTRATION] | | |
+Choice[Permit APPROVED by BUDGET OWNER, Permit APPROVED by SUPERVISOR] | | |
+Choice[Permit APPROVED by BUDGET OWNER, Permit SUBMITTED by EMPLOYEE] | | |
+Choice[Payment Handled, Permit FINAL_APPROVED by DIRECTOR] | | |
+Choice[Request For Payment APPROVED by ADMINISTRATION, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Choice[Permit APPROVED by BUDGET OWNER, Request Payment] | | |
+Choice[Permit APPROVED by ADMINISTRATION, Permit APPROVED by SUPERVISOR] | | |
+Choice[Permit APPROVED by ADMINISTRATION, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Choice[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Choice[Permit APPROVED by BUDGET OWNER, Request For Payment APPROVED by BUDGET OWNER] | | |
+Choice[Request For Payment APPROVED by BUDGET OWNER, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Choice[Permit SUBMITTED by EMPLOYEE, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Choice[Payment Handled, Request For Payment APPROVED by BUDGET OWNER] | | |
+Choice[Payment Handled, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Choice[Permit SUBMITTED by EMPLOYEE, Request For Payment REJECTED by EMPLOYEE] | | |
+Choice[Request For Payment REJECTED by EMPLOYEE, Request Payment] | | |
+Choice[Permit APPROVED by BUDGET OWNER, Request For Payment APPROVED by ADMINISTRATION] | | |
+Choice[Payment Handled, Permit APPROVED by SUPERVISOR] | | |
+Choice[Payment Handled, Request For Payment REJECTED by EMPLOYEE] | | |
+Choice[Permit APPROVED by SUPERVISOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Choice[Permit SUBMITTED by EMPLOYEE, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Choice[Permit APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Choice[Payment Handled, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Choice[Payment Handled, Permit APPROVED by ADMINISTRATION] | | |
+Choice[Permit APPROVED by SUPERVISOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Choice[Request For Payment APPROVED by ADMINISTRATION, Request For Payment REJECTED by EMPLOYEE] | | |
+Choice[Permit APPROVED by BUDGET OWNER, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Choice[Permit APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by DIRECTOR] | | |
+Choice[Permit FINAL_APPROVED by DIRECTOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Choice[Permit APPROVED by BUDGET OWNER, Request For Payment REJECTED by EMPLOYEE] | | |
+Choice[Request For Payment APPROVED by ADMINISTRATION, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Choice[Permit FINAL_APPROVED by DIRECTOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Response[Permit APPROVED by SUPERVISOR, Permit FINAL_APPROVED by DIRECTOR] | | |
+Alternate Precedence[Permit APPROVED by ADMINISTRATION, Permit APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Permit SUBMITTED by EMPLOYEE, Permit FINAL_APPROVED by DIRECTOR] | | |
+Alternate Precedence[Permit SUBMITTED by EMPLOYEE, Permit APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Permit SUBMITTED by EMPLOYEE, Permit APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Request For Payment SUBMITTED by EMPLOYEE, Request For Payment APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Request For Payment SUBMITTED by EMPLOYEE, Payment Handled] | | |
+Alternate Precedence[Request For Payment SUBMITTED by EMPLOYEE, Request Payment] | | |
+Alternate Precedence[Request For Payment SUBMITTED by EMPLOYEE, Request For Payment APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Request Payment, Payment Handled] | | |
+Alternate Precedence[Request For Payment APPROVED by ADMINISTRATION, Request For Payment APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Permit APPROVED by SUPERVISOR, Permit FINAL_APPROVED by DIRECTOR] | | |
+Alternate Precedence[Permit SUBMITTED by EMPLOYEE, Permit APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Permit SUBMITTED by EMPLOYEE, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Request For Payment SUBMITTED by EMPLOYEE, Request For Payment REJECTED by EMPLOYEE] | | |
+Alternate Precedence[Request For Payment SUBMITTED by EMPLOYEE, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Permit FINAL_APPROVED by DIRECTOR, Permit SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Permit APPROVED by BUDGET OWNER, Permit APPROVED by ADMINISTRATION] | | |
+Responded Existence[Permit APPROVED by SUPERVISOR, Permit SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Request Payment, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Permit APPROVED by ADMINISTRATION, Permit SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Request For Payment FINAL_APPROVED by SUPERVISOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Request For Payment APPROVED by BUDGET OWNER, Request Payment] | | |
+Responded Existence[Payment Handled, Request Payment] | | |
+Responded Existence[Request For Payment REJECTED by EMPLOYEE, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Permit APPROVED by BUDGET OWNER, Permit SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Request For Payment APPROVED by BUDGET OWNER, Payment Handled] | | |
+Responded Existence[Request For Payment APPROVED by BUDGET OWNER, Request For Payment APPROVED by ADMINISTRATION] | | |
+Responded Existence[Request For Payment APPROVED by ADMINISTRATION, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Request For Payment APPROVED by BUDGET OWNER, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Permit FINAL_APPROVED by DIRECTOR, Permit APPROVED by SUPERVISOR] | | |
+Responded Existence[Permit APPROVED by SUPERVISOR, Permit FINAL_APPROVED by DIRECTOR] | | |
+Responded Existence[Permit FINAL_APPROVED by SUPERVISOR, Permit SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Payment Handled, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Chain Precedence[Permit SUBMITTED by EMPLOYEE, Permit APPROVED by ADMINISTRATION] | | |
+Absence3[Permit APPROVED by BUDGET OWNER] | |
+Absence3[Permit FINAL_APPROVED by SUPERVISOR] | |
+Absence3[Request For Payment FINAL_APPROVED by SUPERVISOR] | |
+Absence3[Request Payment] | |
+Absence3[Payment Handled] | |
+Response[Request For Payment APPROVED by BUDGET OWNER, Request Payment] | | |
+Response[Request For Payment APPROVED by BUDGET OWNER, Payment Handled] | | |
+Response[Permit APPROVED by SUPERVISOR, Permit FINAL_APPROVED by DIRECTOR] | | |
+Absence2[Permit APPROVED by BUDGET OWNER] | |
+Absence2[Request For Payment FINAL_APPROVED by SUPERVISOR] | |
+Absence2[Request Payment] | |
+Absence2[Payment Handled] | |
+Precedence[Permit APPROVED by ADMINISTRATION, Permit APPROVED by BUDGET OWNER] | | |
+Precedence[Permit SUBMITTED by EMPLOYEE, Permit FINAL_APPROVED by DIRECTOR] | | |
+Precedence[Permit SUBMITTED by EMPLOYEE, Permit APPROVED by SUPERVISOR] | | |
+Precedence[Permit SUBMITTED by EMPLOYEE, Permit APPROVED by ADMINISTRATION] | | |
+Precedence[Request For Payment SUBMITTED by EMPLOYEE, Request For Payment APPROVED by ADMINISTRATION] | | |
+Precedence[Request For Payment SUBMITTED by EMPLOYEE, Payment Handled] | | |
+Precedence[Request For Payment SUBMITTED by EMPLOYEE, Request Payment] | | |
+Precedence[Request For Payment SUBMITTED by EMPLOYEE, Request For Payment APPROVED by BUDGET OWNER] | | |
+Precedence[Request Payment, Payment Handled] | | |
+Precedence[Request For Payment APPROVED by ADMINISTRATION, Request For Payment APPROVED by BUDGET OWNER] | | |
+Precedence[Permit APPROVED by SUPERVISOR, Permit FINAL_APPROVED by DIRECTOR] | | |
+Precedence[Permit SUBMITTED by EMPLOYEE, Permit APPROVED by BUDGET OWNER] | | |
+Precedence[Permit SUBMITTED by EMPLOYEE, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Precedence[Request For Payment SUBMITTED by EMPLOYEE, Request For Payment REJECTED by EMPLOYEE] | | |
+Precedence[Request For Payment SUBMITTED by EMPLOYEE, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Response[Request Payment, Payment Handled] | | |
+Responded Existence[Request Payment, Payment Handled] | | |
+Absence3[Request For Payment REJECTED by EMPLOYEE] | |
+Absence3[Request For Payment APPROVED by BUDGET OWNER] | |
+Absence3[Request For Payment APPROVED by ADMINISTRATION] | |
+Response[Request Payment, Payment Handled] | | |
+Alternate Response[Request For Payment APPROVED by BUDGET OWNER, Request Payment] | | |
+Alternate Response[Request For Payment APPROVED by BUDGET OWNER, Payment Handled] | | |
+Responded Existence[Permit FINAL_APPROVED by DIRECTOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Permit APPROVED by SUPERVISOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Absence3[Permit APPROVED by ADMINISTRATION] | |
+Exclusive Choice[Permit FINAL_APPROVED by DIRECTOR, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Exclusive Choice[Permit APPROVED by SUPERVISOR, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Absence2[Permit FINAL_APPROVED by SUPERVISOR] | |
+Absence2[Request For Payment APPROVED by BUDGET OWNER] | |
+Absence3[Permit APPROVED by SUPERVISOR] | |
+Absence3[Permit FINAL_APPROVED by DIRECTOR] | |
+Responded Existence[Request For Payment APPROVED by ADMINISTRATION, Request Payment] | | |
+Responded Existence[Request For Payment APPROVED by ADMINISTRATION, Payment Handled] | | |
+Response[Request For Payment APPROVED by ADMINISTRATION, Request Payment] | | |
+Response[Request For Payment APPROVED by ADMINISTRATION, Payment Handled] | | |
+Absence2[Permit APPROVED by SUPERVISOR] | |
+Absence2[Permit FINAL_APPROVED by DIRECTOR] | |
+Chain Precedence[Request For Payment SUBMITTED by EMPLOYEE, Request For Payment APPROVED by ADMINISTRATION] | | |
+Alternate Response[Request For Payment FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Responded Existence[Permit APPROVED by BUDGET OWNER, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Request For Payment FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Absence3[Permit SUBMITTED by EMPLOYEE] | |
+Response[Request For Payment FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Alternate Response[Request For Payment FINAL_APPROVED by SUPERVISOR, Payment Handled] | | |
+Responded Existence[Request For Payment FINAL_APPROVED by SUPERVISOR, Payment Handled] | | |
+Responded Existence[Permit APPROVED by ADMINISTRATION, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Response[Request For Payment FINAL_APPROVED by SUPERVISOR, Payment Handled] | | |
+Absence2[Request For Payment APPROVED by ADMINISTRATION] | |
+Responded Existence[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Request For Payment APPROVED by BUDGET OWNER, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Permit APPROVED by SUPERVISOR, Request Payment] | | |
+Responded Existence[Permit FINAL_APPROVED by DIRECTOR, Request Payment] | | |
+Response[Request For Payment APPROVED by BUDGET OWNER, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Permit FINAL_APPROVED by DIRECTOR, Payment Handled] | | |
+Responded Existence[Permit APPROVED by SUPERVISOR, Payment Handled] | | |
+Alternate Response[Request For Payment APPROVED by BUDGET OWNER, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Permit SUBMITTED by EMPLOYEE, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Absence3[Request For Payment SUBMITTED by EMPLOYEE] | |
+Alternate Response[Request For Payment APPROVED by ADMINISTRATION, Request Payment] | | |
+Alternate Response[Request For Payment APPROVED by ADMINISTRATION, Payment Handled] | | |
+Response[Permit APPROVED by ADMINISTRATION, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Chain Precedence[Request Payment, Payment Handled] | | |
+Alternate Response[Permit APPROVED by SUPERVISOR, Request Payment] | | |
+Alternate Response[Permit FINAL_APPROVED by DIRECTOR, Payment Handled] | | |
+Alternate Response[Permit APPROVED by SUPERVISOR, Payment Handled] | | |
+Chain Response[Request Payment, Payment Handled] | | |
+Response[Permit APPROVED by SUPERVISOR, Request Payment] | | |
+Response[Permit FINAL_APPROVED by DIRECTOR, Payment Handled] | | |
+Response[Permit APPROVED by SUPERVISOR, Payment Handled] | | |
+Absence2[Request For Payment REJECTED by EMPLOYEE] | |
+Responded Existence[Request For Payment REJECTED by EMPLOYEE, Permit SUBMITTED by EMPLOYEE] | | |
+Precedence[Permit SUBMITTED by EMPLOYEE, Request For Payment REJECTED by EMPLOYEE] | | |
+Existence[Request For Payment SUBMITTED by EMPLOYEE] | |
+Responded Existence[Permit APPROVED by BUDGET OWNER, Request For Payment APPROVED by ADMINISTRATION] | | |
+Response[Permit SUBMITTED by EMPLOYEE, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Alternate Response[Permit FINAL_APPROVED by DIRECTOR, Request Payment] | | |
+Alternate Response[Permit APPROVED by BUDGET OWNER, Payment Handled] | | |
+Alternate Response[Permit APPROVED by BUDGET OWNER, Request Payment] | | |
+Chain Response[Permit APPROVED by SUPERVISOR, Permit FINAL_APPROVED by DIRECTOR] | | |
+Responded Existence[Permit APPROVED by BUDGET OWNER, Payment Handled] | | |
+Responded Existence[Permit APPROVED by BUDGET OWNER, Request Payment] | | |
+Chain Precedence[Permit APPROVED by SUPERVISOR, Permit FINAL_APPROVED by DIRECTOR] | | |
+Response[Permit FINAL_APPROVED by DIRECTOR, Request Payment] | | |
+Response[Permit APPROVED by BUDGET OWNER, Payment Handled] | | |
+Response[Permit APPROVED by BUDGET OWNER, Request Payment] | | |
+Alternate Response[Permit APPROVED by SUPERVISOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Response[Permit APPROVED by SUPERVISOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Request For Payment APPROVED by ADMINISTRATION, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Response[Request For Payment APPROVED by ADMINISTRATION, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Permit SUBMITTED by EMPLOYEE, Request For Payment REJECTED by EMPLOYEE] | | |
+Responded Existence[Permit APPROVED by BUDGET OWNER, Request For Payment APPROVED by BUDGET OWNER] | | |
+Exclusive Choice[Permit APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Exclusive Choice[Permit FINAL_APPROVED by DIRECTOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Alternate Response[Permit APPROVED by BUDGET OWNER, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Permit APPROVED by BUDGET OWNER, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Response[Permit APPROVED by BUDGET OWNER, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Payment Handled] | | |
+Alternate Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Responded Existence[Request Payment, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Payment Handled, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Payment Handled] | | |
+Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Chain Precedence[Request For Payment APPROVED by ADMINISTRATION, Request For Payment APPROVED by BUDGET OWNER] | | |
+Alternate Response[Permit FINAL_APPROVED by DIRECTOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Response[Permit FINAL_APPROVED by DIRECTOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Absence2[Permit APPROVED by ADMINISTRATION] | |
+Responded Existence[Permit APPROVED by SUPERVISOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Permit FINAL_APPROVED by DIRECTOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Response[Request For Payment APPROVED by ADMINISTRATION, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Chain Response[Permit FINAL_APPROVED by DIRECTOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Alternate Response[Permit APPROVED by BUDGET OWNER, Request For Payment APPROVED by BUDGET OWNER] | | |
+Response[Permit APPROVED by BUDGET OWNER, Request For Payment APPROVED by BUDGET OWNER] | | |
+Responded Existence[Permit APPROVED by ADMINISTRATION, Request For Payment APPROVED by ADMINISTRATION] | | |
+Responded Existence[Request For Payment REJECTED by EMPLOYEE, Permit APPROVED by ADMINISTRATION] | | |
+Precedence[Permit APPROVED by ADMINISTRATION, Request For Payment REJECTED by EMPLOYEE] | | |
+Response[Permit APPROVED by ADMINISTRATION, Request For Payment APPROVED by ADMINISTRATION] | | |
+Chain Response[Request For Payment FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Alternate Response[Permit APPROVED by ADMINISTRATION, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Alternate Response[Permit APPROVED by SUPERVISOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Response[Permit APPROVED by SUPERVISOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Permit APPROVED by ADMINISTRATION, Payment Handled] | | |
+Responded Existence[Permit APPROVED by ADMINISTRATION, Request Payment] | | |
+Response[Permit APPROVED by ADMINISTRATION, Payment Handled] | | |
+Responded Existence[Request For Payment REJECTED by EMPLOYEE, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Response[Permit APPROVED by ADMINISTRATION, Request Payment] | | |
+Responded Existence[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Chain Precedence[Permit APPROVED by ADMINISTRATION, Permit APPROVED by BUDGET OWNER] | | |
+Responded Existence[Permit FINAL_APPROVED by SUPERVISOR, Payment Handled] | | |
+Responded Existence[Permit FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Exclusive Choice[Request For Payment APPROVED by BUDGET OWNER, Request For Payment REJECTED by EMPLOYEE] | | |
+Alternate Response[Permit APPROVED by BUDGET OWNER, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Response[Permit APPROVED by BUDGET OWNER, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Alternate Response[Request For Payment REJECTED by EMPLOYEE, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Chain Response[Request For Payment REJECTED by EMPLOYEE, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Request For Payment REJECTED by EMPLOYEE, Payment Handled] | | |
+Responded Existence[Request For Payment REJECTED by EMPLOYEE, Request Payment] | | |
+Response[Request For Payment REJECTED by EMPLOYEE, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Response[Request For Payment REJECTED by EMPLOYEE, Payment Handled] | | |
+Response[Request For Payment REJECTED by EMPLOYEE, Request Payment] | | |
+Chain Response[Request For Payment APPROVED by BUDGET OWNER, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Permit APPROVED by ADMINISTRATION, Request For Payment REJECTED by EMPLOYEE] | | |
+Precedence[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Response[Permit FINAL_APPROVED by SUPERVISOR, Payment Handled] | | |
+Alternate Response[Permit FINAL_APPROVED by SUPERVISOR, Payment Handled] | | |
+Responded Existence[Request For Payment REJECTED by EMPLOYEE, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Response[Request For Payment REJECTED by EMPLOYEE, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Response[Permit FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Alternate Response[Permit FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Responded Existence[Permit SUBMITTED by EMPLOYEE, Request Payment] | | |
+Alternate Precedence[Permit APPROVED by ADMINISTRATION, Permit APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Permit APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by DIRECTOR] | | |
+Responded Existence[Permit SUBMITTED by EMPLOYEE, Payment Handled] | | |
+Responded Existence[Permit FINAL_APPROVED by DIRECTOR, Permit APPROVED by ADMINISTRATION] | | |
+Responded Existence[Permit APPROVED by SUPERVISOR, Permit APPROVED by ADMINISTRATION] | | |
+Precedence[Permit APPROVED by ADMINISTRATION, Permit APPROVED by SUPERVISOR] | | |
+Precedence[Permit APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by DIRECTOR] | | |
+Alternate Response[Permit APPROVED by BUDGET OWNER, Request For Payment APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Responded Existence[Request For Payment SUBMITTED by EMPLOYEE, Request Payment] | | |
+Exclusive Choice[Permit APPROVED by BUDGET OWNER, Request For Payment REJECTED by EMPLOYEE] | | |
+Response[Request For Payment SUBMITTED by EMPLOYEE, Request Payment] | | |
+Response[Permit APPROVED by BUDGET OWNER, Request For Payment APPROVED by ADMINISTRATION] | | |
+Alternate Response[Permit FINAL_APPROVED by DIRECTOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Request For Payment SUBMITTED by EMPLOYEE, Payment Handled] | | |
+Response[Request For Payment SUBMITTED by EMPLOYEE, Payment Handled] | | |
+Response[Permit FINAL_APPROVED by DIRECTOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Request For Payment REJECTED by EMPLOYEE, Request For Payment APPROVED by ADMINISTRATION] | | |
+Alternate Response[Request For Payment REJECTED by EMPLOYEE, Payment Handled] | | |
+Alternate Response[Request For Payment REJECTED by EMPLOYEE, Request Payment] | | |
+Responded Existence[Permit FINAL_APPROVED by DIRECTOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Responded Existence[Permit APPROVED by SUPERVISOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Responded Existence[Permit APPROVED by ADMINISTRATION, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Chain Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Response[Permit SUBMITTED by EMPLOYEE, Payment Handled] | | |
+Response[Permit SUBMITTED by EMPLOYEE, Request Payment] | | |
+Response[Permit APPROVED by ADMINISTRATION, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Response[Request For Payment REJECTED by EMPLOYEE, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Response[Request For Payment REJECTED by EMPLOYEE, Request For Payment APPROVED by ADMINISTRATION] | | |
+Absence2[Permit SUBMITTED by EMPLOYEE] | |
+Alternate Response[Permit APPROVED by ADMINISTRATION, Request For Payment APPROVED by ADMINISTRATION] | | |
+Responded Existence[Request For Payment APPROVED by BUDGET OWNER, Permit SUBMITTED by EMPLOYEE] | | |
+Precedence[Permit SUBMITTED by EMPLOYEE, Request For Payment APPROVED by BUDGET OWNER] | | |
+Response[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Response[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Permit SUBMITTED by EMPLOYEE, Request For Payment APPROVED by BUDGET OWNER] | | |
+Alternate Response[Permit APPROVED by ADMINISTRATION, Payment Handled] | | |
+Alternate Response[Request For Payment REJECTED by EMPLOYEE, Request For Payment APPROVED by ADMINISTRATION] | | |
+Alternate Response[Permit APPROVED by ADMINISTRATION, Request Payment] | | |
+Exactly1[Request Payment] | |
+Existence[Request Payment] | |
+Alternate Response[Permit SUBMITTED by EMPLOYEE, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Exactly1[Payment Handled] | |
+Existence[Payment Handled] | |
+Responded Existence[Request For Payment APPROVED by BUDGET OWNER, Permit APPROVED by ADMINISTRATION] | | |
+Responded Existence[Permit SUBMITTED by EMPLOYEE, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Precedence[Permit APPROVED by ADMINISTRATION, Request For Payment APPROVED by BUDGET OWNER] | | |
+Alternate Response[Permit APPROVED by SUPERVISOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Response[Permit APPROVED by SUPERVISOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Permit APPROVED by ADMINISTRATION, Request For Payment APPROVED by BUDGET OWNER] | | |
+Responded Existence[Request For Payment SUBMITTED by EMPLOYEE, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Response[Request For Payment SUBMITTED by EMPLOYEE, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Response[Permit FINAL_APPROVED by DIRECTOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Response[Permit FINAL_APPROVED by DIRECTOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Response[Permit SUBMITTED by EMPLOYEE, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Response[Permit APPROVED by ADMINISTRATION, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Request For Payment APPROVED by BUDGET OWNER, Permit APPROVED by BUDGET OWNER] | | |
+Exactly1[Request For Payment FINAL_APPROVED by SUPERVISOR] | |
+Existence[Request For Payment FINAL_APPROVED by SUPERVISOR] | |
+Responded Existence[Request For Payment APPROVED by ADMINISTRATION, Permit SUBMITTED by EMPLOYEE] | | |
+Precedence[Permit SUBMITTED by EMPLOYEE, Request For Payment APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Permit SUBMITTED by EMPLOYEE, Request For Payment APPROVED by ADMINISTRATION] | | |
+Precedence[Permit APPROVED by BUDGET OWNER, Request For Payment APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Permit APPROVED by BUDGET OWNER, Request For Payment APPROVED by BUDGET OWNER] | | |
+Exclusive Choice[Permit FINAL_APPROVED by DIRECTOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Exclusive Choice[Permit APPROVED by SUPERVISOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Alternate Response[Permit APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Permit APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Exclusive Choice[Permit APPROVED by BUDGET OWNER, Permit APPROVED by SUPERVISOR] | | |
+Exclusive Choice[Permit APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by DIRECTOR] | | |
+Response[Permit APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Request For Payment APPROVED by ADMINISTRATION, Permit APPROVED by ADMINISTRATION] | | |
+Precedence[Permit APPROVED by ADMINISTRATION, Request For Payment APPROVED by ADMINISTRATION] | | |
+Response[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Alternate Response[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Alternate Precedence[Permit SUBMITTED by EMPLOYEE, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Request For Payment FINAL_APPROVED by SUPERVISOR, Permit SUBMITTED by EMPLOYEE] | | |
+Precedence[Permit SUBMITTED by EMPLOYEE, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Permit SUBMITTED by EMPLOYEE, Payment Handled] | | |
+Alternate Precedence[Permit SUBMITTED by EMPLOYEE, Request Payment] | | |
+Responded Existence[Payment Handled, Permit SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Request Payment, Permit SUBMITTED by EMPLOYEE] | | |
+Exclusive Choice[Request For Payment APPROVED by ADMINISTRATION, Request For Payment REJECTED by EMPLOYEE] | | |
+Precedence[Permit SUBMITTED by EMPLOYEE, Payment Handled] | | |
+Precedence[Permit SUBMITTED by EMPLOYEE, Request Payment] | | |
+Alternate Precedence[Permit APPROVED by ADMINISTRATION, Request For Payment APPROVED by ADMINISTRATION] | | |
+Responded Existence[Request For Payment REJECTED by EMPLOYEE, Permit APPROVED by BUDGET OWNER] | | |
+Precedence[Permit APPROVED by BUDGET OWNER, Request For Payment REJECTED by EMPLOYEE] | | |
+Alternate Response[Permit SUBMITTED by EMPLOYEE, Request Payment] | | |
+Alternate Response[Permit SUBMITTED by EMPLOYEE, Payment Handled] | | |
+Exclusive Choice[Request For Payment FINAL_APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Alternate Precedence[Permit APPROVED by BUDGET OWNER, Request For Payment REJECTED by EMPLOYEE] | | |
+Chain Response[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Exclusive Choice[Request For Payment REJECTED by EMPLOYEE, Request Payment] | | |
+Exclusive Choice[Payment Handled, Request For Payment REJECTED by EMPLOYEE] | | |
+Responded Existence[Request For Payment SUBMITTED by EMPLOYEE, Permit SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Request For Payment REJECTED by EMPLOYEE, Request For Payment APPROVED by BUDGET OWNER] | | |
+Response[Request For Payment REJECTED by EMPLOYEE, Request For Payment APPROVED by BUDGET OWNER] | | |
+Precedence[Permit SUBMITTED by EMPLOYEE, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Alternate Response[Request For Payment REJECTED by EMPLOYEE, Request For Payment APPROVED by BUDGET OWNER] | | |
+Exclusive Choice[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Init[Permit SUBMITTED by EMPLOYEE] | |
+Existence[Permit SUBMITTED by EMPLOYEE] | |
+Absence2[Request For Payment SUBMITTED by EMPLOYEE] | |
+Exclusive Choice[Permit APPROVED by ADMINISTRATION, Request For Payment REJECTED by EMPLOYEE] | | |
+Alternate Response[Permit SUBMITTED by EMPLOYEE, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Request For Payment REJECTED by EMPLOYEE, Permit APPROVED by SUPERVISOR] | | |
+Responded Existence[Request For Payment REJECTED by EMPLOYEE, Permit FINAL_APPROVED by DIRECTOR] | | |
+Precedence[Permit APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Precedence[Permit FINAL_APPROVED by DIRECTOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Exactly1[Request For Payment SUBMITTED by EMPLOYEE] | |
+Chain Response[Permit APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Permit APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Alternate Precedence[Permit FINAL_APPROVED by DIRECTOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Exclusive Choice[Permit SUBMITTED by EMPLOYEE, Request For Payment REJECTED by EMPLOYEE] | | |
+Alternate Precedence[Request For Payment APPROVED by ADMINISTRATION, Request For Payment REJECTED by EMPLOYEE] | | |
+Precedence[Request For Payment APPROVED by ADMINISTRATION, Request For Payment REJECTED by EMPLOYEE] | | |
+Chain Precedence[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Response[Request For Payment REJECTED by EMPLOYEE, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Response[Request For Payment REJECTED by EMPLOYEE, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Chain Precedence[Permit APPROVED by BUDGET OWNER, Request For Payment REJECTED by EMPLOYEE] | | |
+Alternate Response[Request For Payment REJECTED by EMPLOYEE, Permit APPROVED by BUDGET OWNER] | | |
+Alternate Response[Request For Payment REJECTED by EMPLOYEE, Permit APPROVED by SUPERVISOR] | | |
+Alternate Response[Request For Payment REJECTED by EMPLOYEE, Permit FINAL_APPROVED by DIRECTOR] | | |
+Chain Response[Request For Payment REJECTED by EMPLOYEE, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Chain Response[Request For Payment REJECTED by EMPLOYEE, Permit APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Request For Payment APPROVED by BUDGET OWNER, Request For Payment REJECTED by EMPLOYEE] | | |
+Chain Precedence[Permit APPROVED by ADMINISTRATION, Request For Payment REJECTED by EMPLOYEE] | | |
+Chain Precedence[Permit FINAL_APPROVED by DIRECTOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Response[Request For Payment REJECTED by EMPLOYEE, Permit APPROVED by BUDGET OWNER] | | |
+Response[Request For Payment REJECTED by EMPLOYEE, Permit APPROVED by SUPERVISOR] | | |
+Response[Request For Payment REJECTED by EMPLOYEE, Permit FINAL_APPROVED by DIRECTOR] | | |
+Precedence[Request For Payment APPROVED by BUDGET OWNER, Request For Payment REJECTED by EMPLOYEE] | | |
+Alternate Response[Request For Payment REJECTED by EMPLOYEE, Permit SUBMITTED by EMPLOYEE] | | |
+Alternate Response[Request For Payment REJECTED by EMPLOYEE, Permit APPROVED by ADMINISTRATION] | | |
+Absence[Request For Payment REJECTED by EMPLOYEE] | |
+Chain Response[Request For Payment REJECTED by EMPLOYEE, Permit SUBMITTED by EMPLOYEE] | | |
+Chain Response[Request For Payment REJECTED by EMPLOYEE, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Chain Response[Request For Payment REJECTED by EMPLOYEE, Request For Payment APPROVED by ADMINISTRATION] | | |
+Chain Response[Request For Payment REJECTED by EMPLOYEE, Permit APPROVED by ADMINISTRATION] | | |
+Chain Response[Request For Payment REJECTED by EMPLOYEE, Permit APPROVED by SUPERVISOR] | | |
+Chain Response[Request For Payment REJECTED by EMPLOYEE, Request For Payment APPROVED by BUDGET OWNER] | | |
+Chain Response[Request For Payment REJECTED by EMPLOYEE, Permit FINAL_APPROVED by DIRECTOR] | | |
+Chain Response[Request For Payment REJECTED by EMPLOYEE, Payment Handled] | | |
+Chain Response[Request For Payment REJECTED by EMPLOYEE, Request Payment] | | |
+Alternate Precedence[Payment Handled, Request For Payment REJECTED by EMPLOYEE] | | |
+Alternate Precedence[Request Payment, Request For Payment REJECTED by EMPLOYEE] | | |
+Alternate Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Chain Precedence[Payment Handled, Request For Payment REJECTED by EMPLOYEE] | | |
+Chain Precedence[Permit APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Chain Precedence[Request Payment, Request For Payment REJECTED by EMPLOYEE] | | |
+Chain Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Chain Precedence[Request For Payment APPROVED by BUDGET OWNER, Request For Payment REJECTED by EMPLOYEE] | | |
+Chain Precedence[Permit SUBMITTED by EMPLOYEE, Request For Payment REJECTED by EMPLOYEE] | | |
+Chain Precedence[Request For Payment SUBMITTED by EMPLOYEE, Request For Payment REJECTED by EMPLOYEE] | | |
+Chain Precedence[Request For Payment APPROVED by ADMINISTRATION, Request For Payment REJECTED by EMPLOYEE] | | |
+Exclusive Choice[Request For Payment REJECTED by EMPLOYEE, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Response[Request For Payment REJECTED by EMPLOYEE, Permit SUBMITTED by EMPLOYEE] | | |
+Response[Request For Payment REJECTED by EMPLOYEE, Permit APPROVED by ADMINISTRATION] | | |
+Precedence[Payment Handled, Request For Payment REJECTED by EMPLOYEE] | | |
+Precedence[Request Payment, Request For Payment REJECTED by EMPLOYEE] | | |
+Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Chain Precedence[Permit APPROVED by ADMINISTRATION, Permit APPROVED by SUPERVISOR] | | |
+Responded Existence[Request For Payment APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Response[Request For Payment SUBMITTED by EMPLOYEE, Request Payment] | | |
+Alternate Response[Request For Payment SUBMITTED by EMPLOYEE, Payment Handled] | | |
+Exactly1[Permit SUBMITTED by EMPLOYEE] | |
+Alternate Precedence[Permit APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by DIRECTOR] | | |
+Alternate Precedence[Permit APPROVED by BUDGET OWNER, Permit APPROVED by SUPERVISOR] | | |
+Responded Existence[Permit APPROVED by SUPERVISOR, Permit APPROVED by BUDGET OWNER] | | |
+Responded Existence[Permit FINAL_APPROVED by DIRECTOR, Permit APPROVED by BUDGET OWNER] | | |
+Precedence[Permit APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by DIRECTOR] | | |
+Precedence[Permit APPROVED by BUDGET OWNER, Permit APPROVED by SUPERVISOR] | | |
+Alternate Response[Request For Payment SUBMITTED by EMPLOYEE, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Permit FINAL_APPROVED by DIRECTOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Responded Existence[Permit APPROVED by SUPERVISOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Permit APPROVED by BUDGET OWNER, Permit APPROVED by SUPERVISOR] | | |
+Alternate Response[Permit FINAL_APPROVED by DIRECTOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Alternate Response[Permit APPROVED by SUPERVISOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Response[Permit FINAL_APPROVED by DIRECTOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Response[Permit APPROVED by SUPERVISOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Precedence[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Permit APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Permit FINAL_APPROVED by SUPERVISOR, Permit APPROVED by ADMINISTRATION] | | |
+Precedence[Permit APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Permit SUBMITTED by EMPLOYEE, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Responded Existence[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Exclusive Choice[Permit FINAL_APPROVED by DIRECTOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Exclusive Choice[Permit APPROVED by SUPERVISOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Responded Existence[Permit APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Exclusive Choice[Permit APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by DIRECTOR] | | |
+Exclusive Choice[Permit APPROVED by ADMINISTRATION, Permit APPROVED by SUPERVISOR] | | |
+Response[Permit APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Chain Precedence[Permit SUBMITTED by EMPLOYEE, Permit APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Request For Payment APPROVED by ADMINISTRATION, Payment Handled] | | |
+Alternate Precedence[Request For Payment APPROVED by ADMINISTRATION, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Request For Payment FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Responded Existence[Payment Handled, Request For Payment APPROVED by ADMINISTRATION] | | |
+Precedence[Request For Payment APPROVED by ADMINISTRATION, Payment Handled] | | |
+Precedence[Request For Payment APPROVED by ADMINISTRATION, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Request For Payment APPROVED by ADMINISTRATION, Request Payment] | | |
+Responded Existence[Request Payment, Request For Payment APPROVED by ADMINISTRATION] | | |
+Precedence[Request For Payment APPROVED by ADMINISTRATION, Request Payment] | | |
+Exclusive Choice[Permit APPROVED by SUPERVISOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Exclusive Choice[Permit FINAL_APPROVED by DIRECTOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Response[Permit APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Permit SUBMITTED by EMPLOYEE, Permit APPROVED by ADMINISTRATION] | | |
+Responded Existence[Permit APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Responded Existence[Permit FINAL_APPROVED by DIRECTOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Response[Permit SUBMITTED by EMPLOYEE, Permit APPROVED by ADMINISTRATION] | | |
+Alternate Response[Permit APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Alternate Response[Permit FINAL_APPROVED by DIRECTOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Alternate Precedence[Request For Payment SUBMITTED by EMPLOYEE, Permit FINAL_APPROVED by DIRECTOR] | | |
+Response[Permit APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Response[Permit FINAL_APPROVED by DIRECTOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Precedence[Request For Payment SUBMITTED by EMPLOYEE, Permit FINAL_APPROVED by DIRECTOR] | | |
+Alternate Precedence[Request For Payment APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by DIRECTOR] | | |
+Precedence[Request For Payment APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by DIRECTOR] | | |
+Alternate Response[Permit SUBMITTED by EMPLOYEE, Permit APPROVED by ADMINISTRATION] | | |
+Chain Response[Permit SUBMITTED by EMPLOYEE, Permit APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Permit FINAL_APPROVED by DIRECTOR] | | |
+Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Permit FINAL_APPROVED by DIRECTOR] | | |
+Alternate Precedence[Request For Payment APPROVED by ADMINISTRATION, Permit APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Request For Payment SUBMITTED by EMPLOYEE, Permit APPROVED by SUPERVISOR] | | |
+Precedence[Request For Payment APPROVED by ADMINISTRATION, Permit APPROVED by SUPERVISOR] | | |
+Precedence[Request For Payment SUBMITTED by EMPLOYEE, Permit APPROVED by SUPERVISOR] | | |
+Chain Response[Permit FINAL_APPROVED by DIRECTOR, Request Payment] | | |
+Chain Response[Permit APPROVED by SUPERVISOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Chain Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Permit FINAL_APPROVED by DIRECTOR] | | |
+Alternate Precedence[Request For Payment APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by DIRECTOR] | | |
+Alternate Precedence[Request For Payment APPROVED by BUDGET OWNER, Permit APPROVED by SUPERVISOR] | | |
+Exclusive Choice[Payment Handled, Permit FINAL_APPROVED by DIRECTOR] | | |
+Exclusive Choice[Payment Handled, Permit APPROVED by SUPERVISOR] | | |
+Precedence[Request For Payment APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by DIRECTOR] | | |
+Precedence[Request For Payment APPROVED by BUDGET OWNER, Permit APPROVED by SUPERVISOR] | | |
+Chain Response[Permit FINAL_APPROVED by DIRECTOR, Payment Handled] | | |
+Alternate Precedence[Request Payment, Permit FINAL_APPROVED by DIRECTOR] | | |
+Chain Precedence[Request For Payment APPROVED by ADMINISTRATION, Permit APPROVED by SUPERVISOR] | | |
+Exclusive Choice[Permit APPROVED by SUPERVISOR, Request Payment] | | |
+Exclusive Choice[Permit FINAL_APPROVED by DIRECTOR, Request Payment] | | |
+Precedence[Request Payment, Permit FINAL_APPROVED by DIRECTOR] | | |
+Chain Response[Permit APPROVED by SUPERVISOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Chain Precedence[Request Payment, Permit FINAL_APPROVED by DIRECTOR] | | |
+Chain Precedence[Request For Payment APPROVED by BUDGET OWNER, Permit APPROVED by SUPERVISOR] | | |
+Chain Response[Permit FINAL_APPROVED by DIRECTOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Permit APPROVED by SUPERVISOR] | | |
+Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Permit APPROVED by SUPERVISOR] | | |
+Alternate Response[Permit FINAL_APPROVED by DIRECTOR, Permit SUBMITTED by EMPLOYEE] | | |
+Alternate Response[Permit APPROVED by SUPERVISOR, Permit SUBMITTED by EMPLOYEE] | | |
+Alternate Response[Permit FINAL_APPROVED by DIRECTOR, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Response[Permit APPROVED by SUPERVISOR, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Permit SUBMITTED by EMPLOYEE, Request For Payment APPROVED by ADMINISTRATION] | | |
+Responded Existence[Permit SUBMITTED by EMPLOYEE, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Permit FINAL_APPROVED by DIRECTOR, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Permit APPROVED by SUPERVISOR, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Chain Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Permit APPROVED by SUPERVISOR] | | |
+Exclusive Choice[Permit FINAL_APPROVED by DIRECTOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Exclusive Choice[Permit APPROVED by SUPERVISOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Response[Permit FINAL_APPROVED by DIRECTOR, Permit SUBMITTED by EMPLOYEE] | | |
+Response[Permit APPROVED by SUPERVISOR, Permit SUBMITTED by EMPLOYEE] | | |
+Response[Permit SUBMITTED by EMPLOYEE, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Response[Permit FINAL_APPROVED by DIRECTOR, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Response[Permit APPROVED by SUPERVISOR, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Chain Response[Permit APPROVED by SUPERVISOR, Request Payment] | | |
+Chain Response[Permit FINAL_APPROVED by DIRECTOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Chain Response[Permit FINAL_APPROVED by DIRECTOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Request Payment, Permit APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Request For Payment REJECTED by EMPLOYEE, Permit APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Request For Payment REJECTED by EMPLOYEE, Permit FINAL_APPROVED by DIRECTOR] | | |
+Chain Precedence[Request Payment, Permit APPROVED by SUPERVISOR] | | |
+Chain Precedence[Request For Payment APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by DIRECTOR] | | |
+Response[Permit SUBMITTED by EMPLOYEE, Request For Payment APPROVED by ADMINISTRATION] | | |
+Precedence[Request Payment, Permit APPROVED by SUPERVISOR] | | |
+Precedence[Request For Payment REJECTED by EMPLOYEE, Permit APPROVED by SUPERVISOR] | | |
+Precedence[Request For Payment REJECTED by EMPLOYEE, Permit FINAL_APPROVED by DIRECTOR] | | |
+Alternate Response[Permit APPROVED by SUPERVISOR, Permit APPROVED by BUDGET OWNER] | | |
+Alternate Response[Permit FINAL_APPROVED by DIRECTOR, Permit APPROVED by BUDGET OWNER] | | |
+Alternate Response[Permit FINAL_APPROVED by DIRECTOR, Permit APPROVED by SUPERVISOR] | | |
+Alternate Response[Permit FINAL_APPROVED by DIRECTOR, Permit APPROVED by ADMINISTRATION] | | |
+Alternate Response[Permit APPROVED by SUPERVISOR, Permit APPROVED by ADMINISTRATION] | | |
+Absence[Permit FINAL_APPROVED by DIRECTOR] | |
+Absence[Permit APPROVED by SUPERVISOR] | |
+Chain Response[Permit FINAL_APPROVED by DIRECTOR, Permit SUBMITTED by EMPLOYEE] | | |
+Chain Response[Permit APPROVED by SUPERVISOR, Permit SUBMITTED by EMPLOYEE] | | |
+Chain Response[Permit APPROVED by SUPERVISOR, Permit APPROVED by BUDGET OWNER] | | |
+Chain Response[Permit FINAL_APPROVED by DIRECTOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Chain Response[Permit FINAL_APPROVED by DIRECTOR, Permit APPROVED by BUDGET OWNER] | | |
+Chain Response[Permit APPROVED by SUPERVISOR, Payment Handled] | | |
+Chain Response[Permit APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Chain Response[Permit FINAL_APPROVED by DIRECTOR, Permit APPROVED by SUPERVISOR] | | |
+Chain Response[Permit APPROVED by SUPERVISOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Chain Response[Permit FINAL_APPROVED by DIRECTOR, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Chain Response[Permit APPROVED by SUPERVISOR, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Chain Response[Permit FINAL_APPROVED by DIRECTOR, Permit APPROVED by ADMINISTRATION] | | |
+Chain Response[Permit APPROVED by SUPERVISOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Chain Response[Permit APPROVED by SUPERVISOR, Permit APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Permit FINAL_APPROVED by SUPERVISOR, Permit FINAL_APPROVED by DIRECTOR] | | |
+Alternate Precedence[Payment Handled, Permit APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Permit FINAL_APPROVED by DIRECTOR, Permit APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Permit FINAL_APPROVED by SUPERVISOR, Permit APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Payment Handled, Permit FINAL_APPROVED by DIRECTOR] | | |
+Chain Precedence[Permit SUBMITTED by EMPLOYEE, Permit FINAL_APPROVED by DIRECTOR] | | |
+Chain Precedence[Permit FINAL_APPROVED by SUPERVISOR, Permit FINAL_APPROVED by DIRECTOR] | | |
+Chain Precedence[Payment Handled, Permit APPROVED by SUPERVISOR] | | |
+Chain Precedence[Request For Payment SUBMITTED by EMPLOYEE, Permit FINAL_APPROVED by DIRECTOR] | | |
+Chain Precedence[Request For Payment APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by DIRECTOR] | | |
+Chain Precedence[Permit APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by DIRECTOR] | | |
+Chain Precedence[Request For Payment REJECTED by EMPLOYEE, Permit APPROVED by SUPERVISOR] | | |
+Chain Precedence[Permit FINAL_APPROVED by DIRECTOR, Permit APPROVED by SUPERVISOR] | | |
+Chain Precedence[Permit APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by DIRECTOR] | | |
+Chain Precedence[Request For Payment SUBMITTED by EMPLOYEE, Permit APPROVED by SUPERVISOR] | | |
+Chain Precedence[Request For Payment REJECTED by EMPLOYEE, Permit FINAL_APPROVED by DIRECTOR] | | |
+Chain Precedence[Permit FINAL_APPROVED by SUPERVISOR, Permit APPROVED by SUPERVISOR] | | |
+Chain Precedence[Payment Handled, Permit FINAL_APPROVED by DIRECTOR] | | |
+Exclusive Choice[Permit FINAL_APPROVED by DIRECTOR, Permit SUBMITTED by EMPLOYEE] | | |
+Exclusive Choice[Permit APPROVED by SUPERVISOR, Permit SUBMITTED by EMPLOYEE] | | |
+Response[Permit APPROVED by SUPERVISOR, Permit APPROVED by BUDGET OWNER] | | |
+Response[Permit FINAL_APPROVED by DIRECTOR, Permit APPROVED by BUDGET OWNER] | | |
+Response[Permit FINAL_APPROVED by DIRECTOR, Permit APPROVED by SUPERVISOR] | | |
+Response[Permit FINAL_APPROVED by DIRECTOR, Permit APPROVED by ADMINISTRATION] | | |
+Response[Permit APPROVED by SUPERVISOR, Permit APPROVED by ADMINISTRATION] | | |
+Precedence[Permit FINAL_APPROVED by SUPERVISOR, Permit FINAL_APPROVED by DIRECTOR] | | |
+Precedence[Payment Handled, Permit APPROVED by SUPERVISOR] | | |
+Precedence[Permit FINAL_APPROVED by DIRECTOR, Permit APPROVED by SUPERVISOR] | | |
+Precedence[Permit FINAL_APPROVED by SUPERVISOR, Permit APPROVED by SUPERVISOR] | | |
+Precedence[Payment Handled, Permit FINAL_APPROVED by DIRECTOR] | | |
+Responded Existence[Request For Payment SUBMITTED by EMPLOYEE, Request For Payment APPROVED by ADMINISTRATION] | | |
+Response[Request For Payment SUBMITTED by EMPLOYEE, Request For Payment APPROVED by ADMINISTRATION] | | |
+Alternate Response[Permit APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by DIRECTOR] | | |
+Alternate Response[Permit APPROVED by BUDGET OWNER, Permit APPROVED by SUPERVISOR] | | |
+Responded Existence[Permit APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by DIRECTOR] | | |
+Responded Existence[Permit APPROVED by BUDGET OWNER, Permit APPROVED by SUPERVISOR] | | |
+Exclusive Choice[Permit APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Exclusive Choice[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Response[Permit APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by DIRECTOR] | | |
+Response[Permit APPROVED by BUDGET OWNER, Permit APPROVED by SUPERVISOR] | | |
+Alternate Response[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Response[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Chain Response[Permit APPROVED by BUDGET OWNER, Permit APPROVED by SUPERVISOR] | | |
+Existence[Request For Payment APPROVED by ADMINISTRATION] | |
+Alternate Response[Permit SUBMITTED by EMPLOYEE, Request For Payment APPROVED by ADMINISTRATION] | | |
+Responded Existence[Request For Payment APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Exactly1[Request For Payment APPROVED by ADMINISTRATION] | |
+Alternate Response[Permit SUBMITTED by EMPLOYEE, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Request For Payment FINAL_APPROVED by SUPERVISOR, Permit APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Permit APPROVED by ADMINISTRATION, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Precedence[Permit APPROVED by ADMINISTRATION, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Permit APPROVED by ADMINISTRATION, Payment Handled] | | |
+Responded Existence[Payment Handled, Permit APPROVED by ADMINISTRATION] | | |
+Precedence[Permit APPROVED by ADMINISTRATION, Payment Handled] | | |
+Responded Existence[Request Payment, Permit APPROVED by ADMINISTRATION] | | |
+Responded Existence[Permit APPROVED by BUDGET OWNER, Request For Payment REJECTED by EMPLOYEE] | | |
+Alternate Response[Permit APPROVED by BUDGET OWNER, Request For Payment REJECTED by EMPLOYEE] | | |
+Alternate Precedence[Permit APPROVED by ADMINISTRATION, Request Payment] | | |
+Response[Permit APPROVED by BUDGET OWNER, Request For Payment REJECTED by EMPLOYEE] | | |
+Precedence[Permit APPROVED by ADMINISTRATION, Request Payment] | | |
+Responded Existence[Request For Payment FINAL_APPROVED by SUPERVISOR, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Request For Payment SUBMITTED by EMPLOYEE, Permit APPROVED by BUDGET OWNER] | | |
+Precedence[Request For Payment SUBMITTED by EMPLOYEE, Permit APPROVED by BUDGET OWNER] | | |
+Responded Existence[Request For Payment APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by DIRECTOR] | | |
+Responded Existence[Request For Payment APPROVED by BUDGET OWNER, Permit APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Request For Payment APPROVED by ADMINISTRATION, Permit APPROVED by BUDGET OWNER] | | |
+Precedence[Request For Payment APPROVED by ADMINISTRATION, Permit APPROVED by BUDGET OWNER] | | |
+Responded Existence[Request For Payment SUBMITTED by EMPLOYEE, Permit APPROVED by ADMINISTRATION] | | |
+Precedence[Permit FINAL_APPROVED by DIRECTOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Precedence[Permit APPROVED by SUPERVISOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Precedence[Permit APPROVED by ADMINISTRATION, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Alternate Precedence[Permit FINAL_APPROVED by DIRECTOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Permit APPROVED by SUPERVISOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Exclusive Choice[Permit APPROVED by BUDGET OWNER, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Payment Handled, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Chain Precedence[Request For Payment APPROVED by ADMINISTRATION, Permit APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Request Payment, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Precedence[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Existence[Permit APPROVED by ADMINISTRATION] | |
+Alternate Precedence[Permit FINAL_APPROVED by SUPERVISOR, Payment Handled] | | |
+Precedence[Permit FINAL_APPROVED by SUPERVISOR, Payment Handled] | | |
+Chain Response[Permit APPROVED by BUDGET OWNER, Request For Payment APPROVED by BUDGET OWNER] | | |
+Exclusive Choice[Payment Handled, Permit APPROVED by BUDGET OWNER] | | |
+Exclusive Choice[Permit APPROVED by BUDGET OWNER, Request Payment] | | |
+Alternate Precedence[Permit FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Exclusive Choice[Permit APPROVED by BUDGET OWNER, Request For Payment APPROVED by ADMINISTRATION] | | |
+Precedence[Permit FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Chain Response[Permit APPROVED by BUDGET OWNER, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Alternate Response[Request For Payment SUBMITTED by EMPLOYEE, Request For Payment APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Request For Payment APPROVED by BUDGET OWNER, Permit APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Request For Payment APPROVED by BUDGET OWNER, Permit APPROVED by BUDGET OWNER] | | |
+Exclusive Choice[Permit APPROVED by ADMINISTRATION, Request For Payment APPROVED by BUDGET OWNER] | | |
+Precedence[Request For Payment APPROVED by BUDGET OWNER, Permit APPROVED by BUDGET OWNER] | | |
+Responded Existence[Request For Payment SUBMITTED by EMPLOYEE, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Chain Response[Permit APPROVED by BUDGET OWNER, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Exclusive Choice[Permit APPROVED by BUDGET OWNER, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Chain Response[Request For Payment SUBMITTED by EMPLOYEE, Request For Payment APPROVED by ADMINISTRATION] | | |
+Chain Response[Permit APPROVED by BUDGET OWNER, Request For Payment REJECTED by EMPLOYEE] | | |
+Chain Precedence[Request For Payment SUBMITTED by EMPLOYEE, Permit APPROVED by BUDGET OWNER] | | |
+Precedence[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Alternate Response[Permit APPROVED by BUDGET OWNER, Permit APPROVED by ADMINISTRATION] | | |
+Alternate Response[Permit APPROVED by BUDGET OWNER, Permit SUBMITTED by EMPLOYEE] | | |
+Chain Response[Permit APPROVED by BUDGET OWNER, Request For Payment APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Request For Payment REJECTED by EMPLOYEE, Permit APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Request For Payment REJECTED by EMPLOYEE, Permit APPROVED by BUDGET OWNER] | | |
+Exclusive Choice[Permit SUBMITTED by EMPLOYEE, Request For Payment APPROVED by BUDGET OWNER] | | |
+Response[Permit APPROVED by BUDGET OWNER, Permit APPROVED by ADMINISTRATION] | | |
+Response[Permit APPROVED by BUDGET OWNER, Permit SUBMITTED by EMPLOYEE] | | |
+Precedence[Request For Payment REJECTED by EMPLOYEE, Permit APPROVED by BUDGET OWNER] | | |
+Absence[Permit APPROVED by BUDGET OWNER] | |
+Chain Response[Permit APPROVED by BUDGET OWNER, Permit APPROVED by ADMINISTRATION] | | |
+Chain Response[Permit APPROVED by BUDGET OWNER, Permit SUBMITTED by EMPLOYEE] | | |
+Chain Response[Permit APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by DIRECTOR] | | |
+Chain Response[Permit APPROVED by BUDGET OWNER, Payment Handled] | | |
+Chain Response[Permit APPROVED by BUDGET OWNER, Request Payment] | | |
+Alternate Precedence[Permit APPROVED by SUPERVISOR, Permit APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Permit FINAL_APPROVED by DIRECTOR, Permit APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Permit APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Permit FINAL_APPROVED by SUPERVISOR, Permit APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Payment Handled, Permit APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Request Payment, Permit APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Permit APPROVED by SUPERVISOR, Permit APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Permit FINAL_APPROVED by DIRECTOR, Permit APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Permit APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Permit FINAL_APPROVED by SUPERVISOR, Permit APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Permit SUBMITTED by EMPLOYEE, Permit APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Payment Handled, Permit APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Request Payment, Permit APPROVED by BUDGET OWNER] | | |
+Exclusive Choice[Permit APPROVED by ADMINISTRATION, Permit APPROVED by BUDGET OWNER] | | |
+Exclusive Choice[Permit APPROVED by BUDGET OWNER, Permit SUBMITTED by EMPLOYEE] | | |
+Existence[Permit FINAL_APPROVED by SUPERVISOR] | |
+Precedence[Permit APPROVED by SUPERVISOR, Permit APPROVED by BUDGET OWNER] | | |
+Precedence[Permit FINAL_APPROVED by DIRECTOR, Permit APPROVED by BUDGET OWNER] | | |
+Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Permit APPROVED by BUDGET OWNER] | | |
+Precedence[Permit FINAL_APPROVED by SUPERVISOR, Permit APPROVED by BUDGET OWNER] | | |
+Precedence[Payment Handled, Permit APPROVED by BUDGET OWNER] | | |
+Precedence[Request Payment, Permit APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Exactly1[Permit FINAL_APPROVED by SUPERVISOR] | |
+Exactly1[Permit APPROVED by ADMINISTRATION] | |
+Responded Existence[Request For Payment APPROVED by BUDGET OWNER, Request For Payment REJECTED by EMPLOYEE] | | |
+Alternate Precedence[Request For Payment REJECTED by EMPLOYEE, Request For Payment APPROVED by BUDGET OWNER] | | |
+Precedence[Request For Payment REJECTED by EMPLOYEE, Request For Payment APPROVED by BUDGET OWNER] | | |
+Alternate Response[Request For Payment APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Response[Request For Payment APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Chain Response[Request For Payment APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Chain Precedence[Permit APPROVED by BUDGET OWNER, Request For Payment APPROVED by BUDGET OWNER] | | |
+Alternate Response[Request For Payment APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by DIRECTOR] | | |
+Alternate Response[Request For Payment APPROVED by BUDGET OWNER, Permit APPROVED by SUPERVISOR] | | |
+Response[Request For Payment APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by DIRECTOR] | | |
+Response[Request For Payment APPROVED by BUDGET OWNER, Permit APPROVED by SUPERVISOR] | | |
+Alternate Response[Request For Payment APPROVED by BUDGET OWNER, Permit APPROVED by BUDGET OWNER] | | |
+Chain Response[Request For Payment APPROVED by BUDGET OWNER, Permit APPROVED by BUDGET OWNER] | | |
+Exclusive Choice[Request For Payment APPROVED by BUDGET OWNER, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Response[Request For Payment APPROVED by BUDGET OWNER, Permit APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Chain Response[Request For Payment APPROVED by BUDGET OWNER, Permit APPROVED by SUPERVISOR] | | |
+Chain Precedence[Permit FINAL_APPROVED by DIRECTOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Alternate Response[Request For Payment APPROVED by BUDGET OWNER, Permit SUBMITTED by EMPLOYEE] | | |
+Alternate Response[Request For Payment APPROVED by BUDGET OWNER, Permit APPROVED by ADMINISTRATION] | | |
+Alternate Response[Request For Payment APPROVED by BUDGET OWNER, Request For Payment APPROVED by ADMINISTRATION] | | |
+Alternate Response[Request For Payment APPROVED by BUDGET OWNER, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Alternate Response[Request For Payment APPROVED by BUDGET OWNER, Request For Payment REJECTED by EMPLOYEE] | | |
+Absence[Request For Payment APPROVED by BUDGET OWNER] | |
+Chain Response[Request For Payment APPROVED by BUDGET OWNER, Request Payment] | | |
+Chain Response[Request For Payment APPROVED by BUDGET OWNER, Permit SUBMITTED by EMPLOYEE] | | |
+Chain Response[Request For Payment APPROVED by BUDGET OWNER, Permit APPROVED by ADMINISTRATION] | | |
+Chain Response[Request For Payment APPROVED by BUDGET OWNER, Payment Handled] | | |
+Chain Response[Request For Payment APPROVED by BUDGET OWNER, Request For Payment APPROVED by ADMINISTRATION] | | |
+Chain Response[Request For Payment APPROVED by BUDGET OWNER, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Chain Response[Request For Payment APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by DIRECTOR] | | |
+Chain Response[Request For Payment APPROVED by BUDGET OWNER, Request For Payment REJECTED by EMPLOYEE] | | |
+Alternate Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Request Payment, Request For Payment APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Payment Handled, Request For Payment APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Request Payment, Request For Payment APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Permit SUBMITTED by EMPLOYEE, Request For Payment APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Payment Handled, Request For Payment APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Request For Payment SUBMITTED by EMPLOYEE, Request For Payment APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Permit APPROVED by SUPERVISOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Request For Payment REJECTED by EMPLOYEE, Request For Payment APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Permit APPROVED by ADMINISTRATION, Request For Payment APPROVED by BUDGET OWNER] | | |
+Exclusive Choice[Request For Payment APPROVED by ADMINISTRATION, Request For Payment APPROVED by BUDGET OWNER] | | |
+Exclusive Choice[Request For Payment APPROVED by BUDGET OWNER, Request Payment] | | |
+Exclusive Choice[Request For Payment APPROVED by BUDGET OWNER, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Exclusive Choice[Payment Handled, Request For Payment APPROVED by BUDGET OWNER] | | |
+Response[Request For Payment APPROVED by BUDGET OWNER, Permit SUBMITTED by EMPLOYEE] | | |
+Response[Request For Payment APPROVED by BUDGET OWNER, Permit APPROVED by ADMINISTRATION] | | |
+Response[Request For Payment APPROVED by BUDGET OWNER, Request For Payment APPROVED by ADMINISTRATION] | | |
+Response[Request For Payment APPROVED by BUDGET OWNER, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Response[Request For Payment APPROVED by BUDGET OWNER, Request For Payment REJECTED by EMPLOYEE] | | |
+Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Precedence[Request Payment, Request For Payment APPROVED by BUDGET OWNER] | | |
+Precedence[Payment Handled, Request For Payment APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Permit APPROVED by ADMINISTRATION, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Precedence[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Chain Response[Request For Payment APPROVED by ADMINISTRATION, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Chain Precedence[Permit APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Chain Precedence[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Chain Response[Permit APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Permit APPROVED by ADMINISTRATION, Permit APPROVED by BUDGET OWNER] | | |
+Response[Permit APPROVED by ADMINISTRATION, Permit APPROVED by BUDGET OWNER] | | |
+Responded Existence[Request For Payment APPROVED by ADMINISTRATION, Request For Payment APPROVED by BUDGET OWNER] | | |
+Response[Request For Payment APPROVED by ADMINISTRATION, Request For Payment APPROVED by BUDGET OWNER] | | |
+Alternate Response[Request For Payment APPROVED by ADMINISTRATION, Request For Payment APPROVED by BUDGET OWNER] | | |
+Responded Existence[Permit APPROVED by ADMINISTRATION, Request For Payment APPROVED by BUDGET OWNER] | | |
+Response[Permit APPROVED by ADMINISTRATION, Request For Payment APPROVED by BUDGET OWNER] | | |
+Alternate Response[Permit APPROVED by ADMINISTRATION, Permit APPROVED by BUDGET OWNER] | | |
+Alternate Response[Permit APPROVED by ADMINISTRATION, Request For Payment APPROVED by BUDGET OWNER] | | |
+Chain Response[Request For Payment APPROVED by ADMINISTRATION, Request For Payment APPROVED by BUDGET OWNER] | | |
+Chain Response[Permit APPROVED by ADMINISTRATION, Permit APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Permit APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Responded Existence[Permit FINAL_APPROVED by SUPERVISOR, Permit APPROVED by BUDGET OWNER] | | |
+Precedence[Permit APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Chain Precedence[Request For Payment APPROVED by ADMINISTRATION, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Request For Payment APPROVED by ADMINISTRATION, Permit APPROVED by BUDGET OWNER] | | |
+Alternate Response[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Response[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Chain Precedence[Permit APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Precedence[Permit APPROVED by BUDGET OWNER, Request For Payment APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Permit APPROVED by BUDGET OWNER, Request For Payment APPROVED by ADMINISTRATION] | | |
+Exclusive Choice[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Responded Existence[Permit APPROVED by ADMINISTRATION, Permit APPROVED by SUPERVISOR] | | |
+Responded Existence[Permit APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by DIRECTOR] | | |
+Exclusive Choice[Permit APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Response[Permit APPROVED by ADMINISTRATION, Permit APPROVED by SUPERVISOR] | | |
+Response[Permit APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by DIRECTOR] | | |
+Alternate Response[Permit APPROVED by ADMINISTRATION, Permit APPROVED by SUPERVISOR] | | |
+Alternate Response[Permit APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by DIRECTOR] | | |
+Alternate Precedence[Request For Payment APPROVED by BUDGET OWNER, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Request For Payment FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Precedence[Request For Payment APPROVED by BUDGET OWNER, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Request For Payment APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by DIRECTOR] | | |
+Responded Existence[Request For Payment APPROVED by ADMINISTRATION, Permit APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Request For Payment APPROVED by BUDGET OWNER, Payment Handled] | | |
+Responded Existence[Payment Handled, Request For Payment APPROVED by BUDGET OWNER] | | |
+Precedence[Request For Payment APPROVED by BUDGET OWNER, Payment Handled] | | |
+Alternate Precedence[Request For Payment APPROVED by BUDGET OWNER, Request Payment] | | |
+Responded Existence[Request Payment, Request For Payment APPROVED by BUDGET OWNER] | | |
+Precedence[Request For Payment APPROVED by BUDGET OWNER, Request Payment] | | |
+Precedence[Permit APPROVED by SUPERVISOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Permit APPROVED by SUPERVISOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Responded Existence[Permit SUBMITTED by EMPLOYEE, Permit APPROVED by BUDGET OWNER] | | |
+Responded Existence[Permit SUBMITTED by EMPLOYEE, Request For Payment APPROVED by BUDGET OWNER] | | |
+Response[Permit SUBMITTED by EMPLOYEE, Request For Payment APPROVED by BUDGET OWNER] | | |
+Response[Permit SUBMITTED by EMPLOYEE, Permit APPROVED by BUDGET OWNER] | | |
+Responded Existence[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Precedence[Permit FINAL_APPROVED by DIRECTOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Permit FINAL_APPROVED by DIRECTOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Alternate Response[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Response[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Chain Precedence[Request For Payment APPROVED by BUDGET OWNER, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Request For Payment SUBMITTED by EMPLOYEE, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Precedence[Request For Payment SUBMITTED by EMPLOYEE, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Response[Permit SUBMITTED by EMPLOYEE, Request For Payment APPROVED by BUDGET OWNER] | | |
+Alternate Response[Permit SUBMITTED by EMPLOYEE, Permit APPROVED by BUDGET OWNER] | | |
+Responded Existence[Permit APPROVED by ADMINISTRATION, Request For Payment REJECTED by EMPLOYEE] | | |
+Response[Permit APPROVED by ADMINISTRATION, Request For Payment REJECTED by EMPLOYEE] | | |
+Chain Response[Permit APPROVED by ADMINISTRATION, Permit APPROVED by SUPERVISOR] | | |
+Alternate Response[Permit APPROVED by ADMINISTRATION, Request For Payment REJECTED by EMPLOYEE] | | |
+Chain Precedence[Permit SUBMITTED by EMPLOYEE, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Request For Payment APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Precedence[Request For Payment APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Request For Payment SUBMITTED by EMPLOYEE, Request For Payment APPROVED by BUDGET OWNER] | | |
+Response[Request For Payment SUBMITTED by EMPLOYEE, Request For Payment APPROVED by BUDGET OWNER] | | |
+Chain Response[Permit APPROVED by ADMINISTRATION, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Existence[Request For Payment APPROVED by BUDGET OWNER] | |
+Alternate Precedence[Permit APPROVED by BUDGET OWNER, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Request For Payment FINAL_APPROVED by SUPERVISOR, Permit APPROVED by BUDGET OWNER] | | |
+Precedence[Permit APPROVED by BUDGET OWNER, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Exactly1[Request For Payment APPROVED by BUDGET OWNER] | |
+Chain Response[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Permit APPROVED by BUDGET OWNER, Payment Handled] | | |
+Responded Existence[Payment Handled, Permit APPROVED by BUDGET OWNER] | | |
+Precedence[Permit APPROVED by BUDGET OWNER, Payment Handled] | | |
+Alternate Precedence[Permit APPROVED by BUDGET OWNER, Request Payment] | | |
+Responded Existence[Request Payment, Permit APPROVED by BUDGET OWNER] | | |
+Precedence[Permit APPROVED by BUDGET OWNER, Request Payment] | | |
+Exclusive Choice[Payment Handled, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Exclusive Choice[Permit FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Exclusive Choice[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Response[Request For Payment SUBMITTED by EMPLOYEE, Request For Payment APPROVED by BUDGET OWNER] | | |
+Exclusive Choice[Permit APPROVED by ADMINISTRATION, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Request For Payment APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Chain Precedence[Request For Payment APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Precedence[Request For Payment APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Chain Precedence[Request For Payment APPROVED by BUDGET OWNER, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Chain Response[Permit FINAL_APPROVED by SUPERVISOR, Request Payment] | | |
+Chain Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Request For Payment APPROVED by ADMINISTRATION, Request For Payment REJECTED by EMPLOYEE] | | |
+Exclusive Choice[Permit APPROVED by ADMINISTRATION, Request Payment] | | |
+Exclusive Choice[Payment Handled, Permit APPROVED by ADMINISTRATION] | | |
+Responded Existence[Request For Payment SUBMITTED by EMPLOYEE, Permit APPROVED by BUDGET OWNER] | | |
+Exclusive Choice[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Chain Response[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by BUDGET OWNER] | | |
+Chain Response[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment REJECTED by EMPLOYEE] | | |
+Alternate Precedence[Request For Payment REJECTED by EMPLOYEE, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Request Payment, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Precedence[Request For Payment REJECTED by EMPLOYEE, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Precedence[Request Payment, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Request For Payment REJECTED by EMPLOYEE, Request For Payment APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Request For Payment SUBMITTED by EMPLOYEE, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Precedence[Request For Payment REJECTED by EMPLOYEE, Request For Payment APPROVED by ADMINISTRATION] | | |
+Chain Response[Permit FINAL_APPROVED by SUPERVISOR, Payment Handled] | | |
+Chain Response[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Request Payment, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Payment Handled, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Chain Precedence[Payment Handled, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Precedence[Payment Handled, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Permit FINAL_APPROVED by DIRECTOR, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Permit APPROVED by SUPERVISOR, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Responded Existence[Permit SUBMITTED by EMPLOYEE, Permit FINAL_APPROVED by DIRECTOR] | | |
+Responded Existence[Permit SUBMITTED by EMPLOYEE, Permit APPROVED by SUPERVISOR] | | |
+Responded Existence[Permit FINAL_APPROVED by SUPERVISOR, Permit FINAL_APPROVED by DIRECTOR] | | |
+Responded Existence[Permit FINAL_APPROVED by SUPERVISOR, Permit APPROVED by SUPERVISOR] | | |
+Precedence[Permit FINAL_APPROVED by DIRECTOR, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Precedence[Permit APPROVED by SUPERVISOR, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Chain Precedence[Request For Payment REJECTED by EMPLOYEE, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Response[Permit FINAL_APPROVED by SUPERVISOR, Permit FINAL_APPROVED by DIRECTOR] | | |
+Alternate Response[Permit FINAL_APPROVED by SUPERVISOR, Permit APPROVED by ADMINISTRATION] | | |
+Alternate Response[Permit FINAL_APPROVED by SUPERVISOR, Permit APPROVED by BUDGET OWNER] | | |
+Alternate Response[Permit FINAL_APPROVED by SUPERVISOR, Permit SUBMITTED by EMPLOYEE] | | |
+Alternate Response[Permit FINAL_APPROVED by SUPERVISOR, Permit APPROVED by SUPERVISOR] | | |
+Absence[Permit FINAL_APPROVED by SUPERVISOR] | |
+Chain Response[Permit FINAL_APPROVED by SUPERVISOR, Permit FINAL_APPROVED by DIRECTOR] | | |
+Chain Response[Permit FINAL_APPROVED by SUPERVISOR, Permit APPROVED by ADMINISTRATION] | | |
+Chain Response[Permit FINAL_APPROVED by SUPERVISOR, Permit APPROVED by BUDGET OWNER] | | |
+Chain Response[Permit FINAL_APPROVED by SUPERVISOR, Permit SUBMITTED by EMPLOYEE] | | |
+Chain Response[Permit FINAL_APPROVED by SUPERVISOR, Permit APPROVED by SUPERVISOR] | | |
+Chain Precedence[Permit FINAL_APPROVED by DIRECTOR, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Chain Precedence[Permit APPROVED by SUPERVISOR, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Exclusive Choice[Permit SUBMITTED by EMPLOYEE, Request For Payment APPROVED by ADMINISTRATION] | | |
+Exactly1[Permit APPROVED by BUDGET OWNER] | |
+Existence[Permit APPROVED by BUDGET OWNER] | |
+Response[Permit SUBMITTED by EMPLOYEE, Permit FINAL_APPROVED by DIRECTOR] | | |
+Response[Permit SUBMITTED by EMPLOYEE, Permit APPROVED by SUPERVISOR] | | |
+Response[Permit FINAL_APPROVED by SUPERVISOR, Permit FINAL_APPROVED by DIRECTOR] | | |
+Response[Permit FINAL_APPROVED by SUPERVISOR, Permit APPROVED by ADMINISTRATION] | | |
+Response[Permit FINAL_APPROVED by SUPERVISOR, Permit APPROVED by BUDGET OWNER] | | |
+Response[Permit FINAL_APPROVED by SUPERVISOR, Permit SUBMITTED by EMPLOYEE] | | |
+Response[Permit FINAL_APPROVED by SUPERVISOR, Permit APPROVED by SUPERVISOR] | | |
+Alternate Response[Request For Payment APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Response[Request For Payment APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Response[Permit SUBMITTED by EMPLOYEE, Permit FINAL_APPROVED by DIRECTOR] | | |
+Alternate Response[Permit SUBMITTED by EMPLOYEE, Permit APPROVED by SUPERVISOR] | | |
+Exclusive Choice[Permit APPROVED by ADMINISTRATION, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Alternate Precedence[Request For Payment SUBMITTED by EMPLOYEE, Permit APPROVED by ADMINISTRATION] | | |
+Precedence[Request For Payment SUBMITTED by EMPLOYEE, Permit APPROVED by ADMINISTRATION] | | |
+Chain Response[Permit APPROVED by ADMINISTRATION, Request For Payment APPROVED by ADMINISTRATION] | | |
+Chain Response[Permit APPROVED by ADMINISTRATION, Payment Handled] | | |
+Alternate Precedence[Request Payment, Permit APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Permit APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Request For Payment APPROVED by ADMINISTRATION, Permit APPROVED by ADMINISTRATION] | | |
+Precedence[Request Payment, Permit APPROVED by ADMINISTRATION] | | |
+Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Permit APPROVED by ADMINISTRATION] | | |
+Precedence[Request For Payment APPROVED by ADMINISTRATION, Permit APPROVED by ADMINISTRATION] | | |
+Alternate Response[Permit APPROVED by ADMINISTRATION, Permit SUBMITTED by EMPLOYEE] | | |
+Absence[Permit APPROVED by ADMINISTRATION] | |
+Chain Response[Permit APPROVED by ADMINISTRATION, Request For Payment REJECTED by EMPLOYEE] | | |
+Chain Response[Permit APPROVED by ADMINISTRATION, Request Payment] | | |
+Chain Response[Permit APPROVED by ADMINISTRATION, Permit SUBMITTED by EMPLOYEE] | | |
+Chain Response[Permit APPROVED by ADMINISTRATION, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Chain Response[Permit APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by DIRECTOR] | | |
+Chain Response[Permit APPROVED by ADMINISTRATION, Request For Payment APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Permit APPROVED by BUDGET OWNER, Permit APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Permit FINAL_APPROVED by SUPERVISOR, Permit APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Request For Payment APPROVED by BUDGET OWNER, Permit APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Request For Payment REJECTED by EMPLOYEE, Permit APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Permit FINAL_APPROVED by DIRECTOR, Permit APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Payment Handled, Permit APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Permit APPROVED by SUPERVISOR, Permit APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Request Payment, Permit APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Permit APPROVED by BUDGET OWNER, Permit APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Permit APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Permit FINAL_APPROVED by SUPERVISOR, Permit APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Request For Payment APPROVED by BUDGET OWNER, Permit APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Request For Payment REJECTED by EMPLOYEE, Permit APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Request For Payment APPROVED by ADMINISTRATION, Permit APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Request For Payment SUBMITTED by EMPLOYEE, Permit APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Permit FINAL_APPROVED by DIRECTOR, Permit APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Payment Handled, Permit APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Permit APPROVED by SUPERVISOR, Permit APPROVED by ADMINISTRATION] | | |
+Response[Permit APPROVED by ADMINISTRATION, Permit SUBMITTED by EMPLOYEE] | | |
+Precedence[Permit APPROVED by BUDGET OWNER, Permit APPROVED by ADMINISTRATION] | | |
+Precedence[Permit FINAL_APPROVED by SUPERVISOR, Permit APPROVED by ADMINISTRATION] | | |
+Precedence[Request For Payment APPROVED by BUDGET OWNER, Permit APPROVED by ADMINISTRATION] | | |
+Precedence[Request For Payment REJECTED by EMPLOYEE, Permit APPROVED by ADMINISTRATION] | | |
+Precedence[Permit FINAL_APPROVED by DIRECTOR, Permit APPROVED by ADMINISTRATION] | | |
+Precedence[Payment Handled, Permit APPROVED by ADMINISTRATION] | | |
+Precedence[Permit APPROVED by SUPERVISOR, Permit APPROVED by ADMINISTRATION] | | |
+Precedence[Permit APPROVED by BUDGET OWNER, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Alternate Response[Request For Payment APPROVED by ADMINISTRATION, Permit APPROVED by BUDGET OWNER] | | |
+Response[Request For Payment APPROVED by ADMINISTRATION, Permit APPROVED by BUDGET OWNER] | | |
+Chain Response[Request For Payment APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Permit FINAL_APPROVED by DIRECTOR, Payment Handled] | | |
+Alternate Precedence[Permit APPROVED by SUPERVISOR, Payment Handled] | | |
+Responded Existence[Request Payment, Permit APPROVED by SUPERVISOR] | | |
+Responded Existence[Payment Handled, Permit APPROVED by SUPERVISOR] | | |
+Responded Existence[Payment Handled, Permit FINAL_APPROVED by DIRECTOR] | | |
+Responded Existence[Request Payment, Permit FINAL_APPROVED by DIRECTOR] | | |
+Precedence[Permit FINAL_APPROVED by DIRECTOR, Payment Handled] | | |
+Precedence[Permit APPROVED by SUPERVISOR, Payment Handled] | | |
+Alternate Precedence[Permit APPROVED by SUPERVISOR, Request Payment] | | |
+Precedence[Permit APPROVED by SUPERVISOR, Request Payment] | | |
+Responded Existence[Request For Payment FINAL_APPROVED by SUPERVISOR, Permit FINAL_APPROVED by DIRECTOR] | | |
+Responded Existence[Request For Payment FINAL_APPROVED by SUPERVISOR, Permit APPROVED by SUPERVISOR] | | |
+Chain Response[Request For Payment APPROVED by ADMINISTRATION, Permit APPROVED by BUDGET OWNER] | | |
+Alternate Precedence[Permit APPROVED by SUPERVISOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Precedence[Permit APPROVED by SUPERVISOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Permit APPROVED by BUDGET OWNER, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Alternate Response[Request For Payment APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by DIRECTOR] | | |
+Alternate Precedence[Permit FINAL_APPROVED by DIRECTOR, Request Payment] | | |
+Response[Request For Payment APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by DIRECTOR] | | |
+Precedence[Permit FINAL_APPROVED by DIRECTOR, Request Payment] | | |
+Alternate Response[Request For Payment APPROVED by ADMINISTRATION, Permit APPROVED by SUPERVISOR] | | |
+Response[Request For Payment APPROVED by ADMINISTRATION, Permit APPROVED by SUPERVISOR] | | |
+Alternate Precedence[Permit FINAL_APPROVED by DIRECTOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Precedence[Permit FINAL_APPROVED by DIRECTOR, Request For Payment FINAL_APPROVED by SUPERVISOR] | | |
+Chain Response[Request For Payment APPROVED by ADMINISTRATION, Permit APPROVED by SUPERVISOR] | | |
+Alternate Response[Request For Payment APPROVED by ADMINISTRATION, Request For Payment REJECTED by EMPLOYEE] | | |
+Response[Request For Payment APPROVED by ADMINISTRATION, Request For Payment REJECTED by EMPLOYEE] | | |
+Chain Precedence[Permit FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Alternate Response[Request For Payment APPROVED by ADMINISTRATION, Permit SUBMITTED by EMPLOYEE] | | |
+Alternate Response[Request For Payment APPROVED by ADMINISTRATION, Permit APPROVED by ADMINISTRATION] | | |
+Chain Response[Request For Payment APPROVED by ADMINISTRATION, Permit FINAL_APPROVED by DIRECTOR] | | |
+Chain Precedence[Permit APPROVED by ADMINISTRATION, Request For Payment APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Permit APPROVED by BUDGET OWNER, Request For Payment APPROVED by ADMINISTRATION] | | |
+Response[Request For Payment APPROVED by ADMINISTRATION, Permit SUBMITTED by EMPLOYEE] | | |
+Response[Request For Payment APPROVED by ADMINISTRATION, Permit APPROVED by ADMINISTRATION] | | |
+Alternate Response[Request For Payment APPROVED by ADMINISTRATION, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Absence[Request For Payment APPROVED by ADMINISTRATION] | |
+Chain Response[Request For Payment APPROVED by ADMINISTRATION, Permit SUBMITTED by EMPLOYEE] | | |
+Chain Response[Request For Payment APPROVED by ADMINISTRATION, Request Payment] | | |
+Chain Response[Request For Payment APPROVED by ADMINISTRATION, Payment Handled] | | |
+Chain Response[Request For Payment APPROVED by ADMINISTRATION, Permit APPROVED by ADMINISTRATION] | | |
+Chain Response[Request For Payment APPROVED by ADMINISTRATION, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Chain Response[Request For Payment APPROVED by ADMINISTRATION, Request For Payment REJECTED by EMPLOYEE] | | |
+Alternate Precedence[Request For Payment APPROVED by BUDGET OWNER, Request For Payment APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Request Payment, Request For Payment APPROVED by ADMINISTRATION] | | |
+Alternate Precedence[Payment Handled, Request For Payment APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Permit FINAL_APPROVED by DIRECTOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Request For Payment REJECTED by EMPLOYEE, Request For Payment APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Request For Payment APPROVED by BUDGET OWNER, Request For Payment APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Request Payment, Request For Payment APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Permit SUBMITTED by EMPLOYEE, Request For Payment APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Payment Handled, Request For Payment APPROVED by ADMINISTRATION] | | |
+Chain Precedence[Permit APPROVED by SUPERVISOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Exclusive Choice[Request For Payment APPROVED by ADMINISTRATION, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Response[Request For Payment APPROVED by ADMINISTRATION, Request For Payment SUBMITTED by EMPLOYEE] | | |
+Precedence[Request For Payment APPROVED by BUDGET OWNER, Request For Payment APPROVED by ADMINISTRATION] | | |
+Precedence[Request For Payment FINAL_APPROVED by SUPERVISOR, Request For Payment APPROVED by ADMINISTRATION] | | |
+Precedence[Request Payment, Request For Payment APPROVED by ADMINISTRATION] | | |
+Precedence[Payment Handled, Request For Payment APPROVED by ADMINISTRATION] | | |
+Responded Existence[Request For Payment SUBMITTED by EMPLOYEE, Permit FINAL_APPROVED by DIRECTOR] | | |
+Responded Existence[Request For Payment SUBMITTED by EMPLOYEE, Permit APPROVED by SUPERVISOR] | | |

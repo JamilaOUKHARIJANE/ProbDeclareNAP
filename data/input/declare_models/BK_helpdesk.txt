@@ -1,0 +1,5 @@
+Responded Existence[Resolve ticket, Wait] | | |; 0.528 
+Existence1[Wait] | |; 0.528
+Alternate Precedence[Wait, Closed] | | |; 0.528 
+Precedence[Wait, Resolve ticket] | | |; 0.52 
+Alternate Response[Assign seriousness, Wait] | | |; 0.521 

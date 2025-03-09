@@ -1,0 +1,161 @@
+activity Completed_Closed
+bind Completed_Closed: org:resource
+activity Accepted_In Progress
+bind Accepted_In Progress: org:resource
+activity Queued_Awaiting Assignment
+bind Queued_Awaiting Assignment: org:resource
+activity Accepted_Assigned
+bind Accepted_Assigned: org:resource
+activity Accepted_Wait
+bind Accepted_Wait: org:resource
+org:resource: Org line A1, Org line A2, Org line V11, Org line V2, Org line V5, Org line V7n, Org line B, Org line C, Org line G1, Org line G3, Org line F, Org line G4, Org line D
+Choice[Accepted_Wait, Queued_Awaiting Assignment] | | |
+Choice[Accepted_In Progress, Accepted_Wait] | | |
+Choice[Accepted_Assigned, Queued_Awaiting Assignment] | | |
+Choice[Accepted_Assigned, Completed_Closed] | | |
+Choice[Accepted_Assigned, Accepted_Wait] | | |
+Choice[Accepted_In Progress, Completed_Closed] | | |
+Choice[Accepted_Wait, Completed_Closed] | | |
+Choice[Accepted_In Progress, Queued_Awaiting Assignment] | | |
+Choice[Completed_Closed, Queued_Awaiting Assignment] | | |
+Choice[Accepted_Assigned, Accepted_In Progress] | | |
+Responded Existence[Queued_Awaiting Assignment, Completed_Closed] | | |
+Responded Existence[Accepted_Wait, Completed_Closed] | | |
+Responded Existence[Accepted_Assigned, Completed_Closed] | | |
+Responded Existence[Accepted_In Progress, Completed_Closed] | | |
+Existence[Completed_Closed] | |
+Response[Queued_Awaiting Assignment, Completed_Closed] | | |
+Response[Accepted_Wait, Completed_Closed] | | |
+Response[Accepted_Assigned, Completed_Closed] | | |
+Response[Accepted_In Progress, Completed_Closed] | | |
+Responded Existence[Queued_Awaiting Assignment, Accepted_In Progress] | | |
+Responded Existence[Accepted_Assigned, Accepted_In Progress] | | |
+Response[Queued_Awaiting Assignment, Accepted_In Progress] | | |
+Responded Existence[Accepted_Wait, Accepted_In Progress] | | |
+Alternate Precedence[Accepted_In Progress, Completed_Closed] | | |
+Responded Existence[Completed_Closed, Accepted_In Progress] | | |
+Existence[Accepted_In Progress] | |
+Precedence[Accepted_In Progress, Completed_Closed] | | |
+Absence3[Completed_Closed] | |
+Precedence[Accepted_In Progress, Accepted_Assigned] | | |
+Absence3[Accepted_Wait] | |
+Precedence[Accepted_In Progress, Accepted_Wait] | | |
+Absence3[Accepted_Assigned] | |
+Precedence[Accepted_In Progress, Queued_Awaiting Assignment] | | |
+Exactly1[Completed_Closed] | |
+Absence2[Completed_Closed] | |
+Alternate Response[Queued_Awaiting Assignment, Accepted_In Progress] | | |
+Alternate Precedence[Accepted_In Progress, Accepted_Wait] | | |
+Absence3[Queued_Awaiting Assignment] | |
+Response[Accepted_Assigned, Accepted_In Progress] | | |
+Init[Accepted_In Progress] | |
+Alternate Response[Accepted_Wait, Completed_Closed] | | |
+Absence2[Accepted_Wait] | |
+Alternate Precedence[Accepted_In Progress, Accepted_Assigned] | | |
+Chain Response[Queued_Awaiting Assignment, Accepted_In Progress] | | |
+Alternate Precedence[Accepted_In Progress, Queued_Awaiting Assignment] | | |
+Alternate Response[Accepted_Assigned, Completed_Closed] | | |
+Absence2[Accepted_Assigned] | |
+Chain Precedence[Accepted_In Progress, Accepted_Wait] | | |
+Alternate Response[Accepted_Assigned, Accepted_In Progress] | | |
+Exclusive Choice[Accepted_Assigned, Accepted_Wait] | | |
+Responded Existence[Accepted_Assigned, Queued_Awaiting Assignment] | | |
+Chain Precedence[Accepted_In Progress, Accepted_Assigned] | | |
+Chain Precedence[Accepted_In Progress, Queued_Awaiting Assignment] | | |
+Alternate Response[Queued_Awaiting Assignment, Completed_Closed] | | |
+Precedence[Queued_Awaiting Assignment, Accepted_Assigned] | | |
+Absence2[Queued_Awaiting Assignment] | |
+Exclusive Choice[Accepted_Wait, Queued_Awaiting Assignment] | | |
+Chain Response[Accepted_Assigned, Accepted_In Progress] | | |
+Responded Existence[Queued_Awaiting Assignment, Accepted_Assigned] | | |
+Alternate Precedence[Queued_Awaiting Assignment, Accepted_Assigned] | | |
+Chain Response[Accepted_Wait, Completed_Closed] | | |
+Response[Queued_Awaiting Assignment, Accepted_Assigned] | | |
+Responded Existence[Accepted_Wait, Queued_Awaiting Assignment] | | |
+Response[Accepted_Wait, Accepted_In Progress] | | |
+Alternate Response[Queued_Awaiting Assignment, Accepted_Assigned] | | |
+Responded Existence[Accepted_Wait, Accepted_Assigned] | | |
+Alternate Response[Accepted_Wait, Accepted_In Progress] | | |
+Chain Precedence[Accepted_In Progress, Completed_Closed] | | |
+Precedence[Queued_Awaiting Assignment, Accepted_Wait] | | |
+Exclusive Choice[Accepted_Assigned, Queued_Awaiting Assignment] | | |
+Responded Existence[Accepted_Assigned, Accepted_Wait] | | |
+Alternate Precedence[Queued_Awaiting Assignment, Accepted_Wait] | | |
+Precedence[Accepted_Assigned, Accepted_Wait] | | |
+Chain Response[Accepted_Wait, Accepted_In Progress] | | |
+Alternate Precedence[Accepted_Assigned, Accepted_Wait] | | |
+Responded Existence[Queued_Awaiting Assignment, Accepted_Wait] | | |
+Response[Accepted_Wait, Accepted_Assigned] | | |
+Response[Accepted_Wait, Queued_Awaiting Assignment] | | |
+Alternate Response[Accepted_Wait, Accepted_Assigned] | | |
+Alternate Response[Accepted_Wait, Queued_Awaiting Assignment] | | |
+Response[Accepted_Assigned, Accepted_Wait] | | |
+Chain Precedence[Accepted_Assigned, Accepted_Wait] | | |
+Chain Response[Accepted_Wait, Queued_Awaiting Assignment] | | |
+Alternate Response[Accepted_Assigned, Accepted_Wait] | | |
+Chain Response[Accepted_Wait, Accepted_Assigned] | | |
+Response[Queued_Awaiting Assignment, Accepted_Wait] | | |
+Precedence[Accepted_Wait, Accepted_Assigned] | | |
+Exclusive Choice[Accepted_In Progress, Accepted_Wait] | | |
+Precedence[Completed_Closed, Accepted_Wait] | | |
+Alternate Precedence[Completed_Closed, Accepted_Wait] | | |
+Absence[Accepted_Wait] | |
+Chain Precedence[Queued_Awaiting Assignment, Accepted_Wait] | | |
+Chain Precedence[Completed_Closed, Accepted_Wait] | | |
+Exclusive Choice[Accepted_Wait, Completed_Closed] | | |
+Alternate Precedence[Accepted_Wait, Accepted_Assigned] | | |
+Chain Response[Accepted_Assigned, Accepted_Wait] | | |
+Chain Precedence[Queued_Awaiting Assignment, Accepted_Assigned] | | |
+Chain Precedence[Accepted_Wait, Accepted_Assigned] | | |
+Response[Accepted_Assigned, Queued_Awaiting Assignment] | | |
+Chain Response[Accepted_Assigned, Completed_Closed] | | |
+Alternate Response[Queued_Awaiting Assignment, Accepted_Wait] | | |
+Alternate Response[Accepted_Assigned, Queued_Awaiting Assignment] | | |
+Absence3[Accepted_In Progress] | |
+Chain Response[Accepted_Assigned, Queued_Awaiting Assignment] | | |
+Precedence[Completed_Closed, Accepted_Assigned] | | |
+Alternate Precedence[Completed_Closed, Accepted_Assigned] | | |
+Exclusive Choice[Accepted_Assigned, Accepted_In Progress] | | |
+Absence[Accepted_Assigned] | |
+Chain Precedence[Completed_Closed, Accepted_Assigned] | | |
+Exclusive Choice[Accepted_Assigned, Completed_Closed] | | |
+Precedence[Accepted_Wait, Queued_Awaiting Assignment] | | |
+Alternate Precedence[Accepted_Wait, Queued_Awaiting Assignment] | | |
+Chain Precedence[Accepted_Wait, Queued_Awaiting Assignment] | | |
+Chain Response[Queued_Awaiting Assignment, Accepted_Assigned] | | |
+Precedence[Completed_Closed, Queued_Awaiting Assignment] | | |
+Alternate Precedence[Accepted_Assigned, Queued_Awaiting Assignment] | | |
+Alternate Precedence[Completed_Closed, Queued_Awaiting Assignment] | | |
+Precedence[Accepted_Assigned, Queued_Awaiting Assignment] | | |
+Chain Precedence[Accepted_Assigned, Queued_Awaiting Assignment] | | |
+Exclusive Choice[Accepted_In Progress, Queued_Awaiting Assignment] | | |
+Absence[Queued_Awaiting Assignment] | |
+Chain Response[Queued_Awaiting Assignment, Completed_Closed] | | |
+Chain Response[Queued_Awaiting Assignment, Accepted_Wait] | | |
+Chain Precedence[Completed_Closed, Queued_Awaiting Assignment] | | |
+Exclusive Choice[Completed_Closed, Queued_Awaiting Assignment] | | |
+Existence2[Accepted_In Progress] | |
+Alternate Response[Accepted_In Progress, Completed_Closed] | | |
+Absence2[Accepted_In Progress] | |
+Exactly1[Accepted_In Progress] | |
+Responded Existence[Accepted_In Progress, Queued_Awaiting Assignment] | | |
+Responded Existence[Completed_Closed, Queued_Awaiting Assignment] | | |
+Existence[Queued_Awaiting Assignment] | |
+Precedence[Queued_Awaiting Assignment, Completed_Closed] | | |
+Alternate Precedence[Queued_Awaiting Assignment, Completed_Closed] | | |
+Responded Existence[Accepted_In Progress, Accepted_Assigned] | | |
+Responded Existence[Completed_Closed, Accepted_Assigned] | | |
+Existence[Accepted_Assigned] | |
+Precedence[Accepted_Assigned, Completed_Closed] | | |
+Alternate Precedence[Accepted_Assigned, Completed_Closed] | | |
+Existence3[Accepted_In Progress] | |
+Chain Response[Accepted_In Progress, Completed_Closed] | | |
+Responded Existence[Accepted_In Progress, Accepted_Wait] | | |
+Responded Existence[Completed_Closed, Accepted_Wait] | | |
+Existence[Accepted_Wait] | |
+Precedence[Accepted_Wait, Completed_Closed] | | |
+Alternate Precedence[Accepted_Wait, Completed_Closed] | | |
+Exactly1[Accepted_Assigned] | |
+Exactly1[Queued_Awaiting Assignment] | |
+Exactly2[Accepted_In Progress] | |
+Exactly1[Accepted_Wait] | |
